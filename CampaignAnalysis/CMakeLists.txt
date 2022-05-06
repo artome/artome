@@ -11,7 +11,7 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/../cmake/Modules/")
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH})
 if(WIN32)
    set(CMAKE_CXX_FLAGS "-Wa,-mbig-obj")
 endif()
@@ -30,18 +30,10 @@ find_package(Qt${QT_VERSION_MAJOR} COMPONENTS PrintSupport REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Sql REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Svg REQUIRED)
 add_definitions( -DLIBINTERFACE_VERSION)
-execute_process (
-    COMMAND bash -c "git -C  ${CMAKE_SOURCE_DIR} --no-pager log -1 --format='%ai' " OUTPUT_STRIP_TRAILING_WHITESPACE
-    OUTPUT_VARIABLE LIBINTERFACE_VERSION
-)
-set(version_file "${CMAKE_CURRENT_BINARY_DIR}/version.h")
-
-configure_file( ${CMAKE_SOURCE_DIR}/../cmake/Modules/version_config.h.in ${CMAKE_BINARY_DIR}/version.h )
 
 
-find_package(PLplot REQUIRED)
-include_directories(${PLPLOT_INCLUDE_DIR})
-include_directories(../PLottingFramework ../DbAPI ../exprtk ../GslWrapper ../EditHtmlEntries ${CMAKE_BINARY_DIR}/)
+
+include_directories(../PLottingFramework ../DbAPI ../exprtk ../GslWrapper ../EditHtmlEntries )
 find_package(GSL REQUIRED)
 
 set(PROJECT_SOURCES
