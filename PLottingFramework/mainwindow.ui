@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout" stretch="3,1">
+      <item>
+       <widget class="QGraphicsView" name="graphicsView"/>
+      </item>
+      <item>
+       <widget class="QTextBrowser" name="textBrowser"/>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuactions">
+    <property name="title">
+     <string>actions</string>
+    </property>
+    <addaction name="actionfirsttest"/>
+    <addaction name="actionTestbanana"/>
+    <addaction name="actiontestbanana_xy"/>
+    <addaction name="actiontestehisto1"/>
+    <addaction name="actiontestehisto2"/>
+   </widget>
+   <addaction name="menuactions"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionfirsttest">
+   <property name="text">
+    <string>firsttest</string>
+   </property>
+  </action>
+  <action name="actionTestbanana">
+   <property name="text">
+    <string>Testbanana</string>
+   </property>
+  </action>
+  <action name="actiontestbanana_xy">
+   <property name="text">
+    <string>testbanana+xy</string>
+   </property>
+  </action>
+  <action name="actiontestehisto1">
+   <property name="text">
+    <string>testehisto1</string>
+   </property>
+  </action>
+  <action name="actiontestehisto2">
+   <property name="text">
+    <string>testehisto2</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
