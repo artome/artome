@@ -296,15 +296,14 @@ if(NOT ENABLE_DYNDRIVERS AND PLD_wxwidgets AND RT_LIB)
   list(APPEND pc_libplplot_LINK_FLAGS ${RT_LIB})
 endif(NOT ENABLE_DYNDRIVERS AND PLD_wxwidgets AND RT_LIB)
 
-#message(STATUS "libplplot_LINK_LIBRARIES = ${libplplot_LINK_LIBRARIES}")
+message(STATUS "libplplot_LINK_LIBRARIES = ${libplplot_LINK_LIBRARIES}")
+
 
 configure_library_build(plplot "" "${plplot_LIB_SRCS}" "${libplplot_LINK_LIBRARIES}" "${LIB_INSTALL_RPATH}")
 
+message(STATUS "libplplot_LIB_SRCS = ${plplot_LIB_SRCS}")
 if(NOT ENABLE_DYNDRIVERS AND ANY_QT_DEVICE)
-  if(NOT PLPLOT_USE_QT5)
-    # Update the target COMPILE_DEFINITIONS and INCLUDE_DIRECTORIES
-    set_qt4_target_properties(${WRITEABLE_TARGET}plplot)
-  endif(NOT PLPLOT_USE_QT5)
+
 
   set_target_properties(${WRITEABLE_TARGET}plplot PROPERTIES
     AUTOMOC ON

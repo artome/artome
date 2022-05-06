@@ -83,173 +83,75 @@ endif(DEFAULT_NO_BINDINGS)
 if(ENABLE_qt)
   # Our experience now (since the Qt5 font configuration fix) is Qt5 is just as good as Qt4.
   # So use Qt5 by default.
-  option(PLPLOT_USE_QT5 "Use Qt5" ON)
-
-  if(NOT PLPLOT_USE_QT5)
-    # MAINTENANCE 2016-11.
-    # Use a minimum version corresponding to the version installed by
-    # Debian stable.  I assume all other non-enterprise Linux distros,
-    # Mac OS X, and Windows platforms also give access to this version
-    # of Qt4 or later.
-    find_package(Qt4 4.8.6 COMPONENTS QtCore QtGui QtSvg)
-
-    # QT4_FOUND is defined to be true or false by find_package(Qt4 ...)
-    if(QT4_FOUND)
-      # Do not include(${QT_USE_FILE}) here because it contaminates ALL
-      # compile properties with Qt flags from (this) top-level directory
-      # on down.  Use this alternative instead which includes a function
-      # set_qt4_target_properties which should be called with the
-      # appropriate target argument whenever a Qt4-related target is built.
-      include(ndp_UseQt4)
-
-      # QT_COMPILE_DEFINITIONS (used only for pc_qt_COMPILE_FLAGS below),
-      # QT_INCLUDE_DIRECTORIES (used only for pc_qt_COMPILE_FLAGS below),
-      # NP_COMPILE_DEFINITIONS (used only in set_qt_properties function),
-      # NP_QT_INCLUDE_DIRECTORIES (used only in set_qt_properties function), and
-      # QT_LIBRARIES (used wherever link with qt libraries is needed)
-      # are now defined.
-
-      set(pc_qt_COMPILE_FLAGS ${QT_COMPILE_DEFINES} ${QT_INCLUDE_DIRECTORIES})
-      string(REGEX REPLACE ";" " " pc_qt_COMPILE_FLAGS "${pc_qt_COMPILE_FLAGS}")
-      # Work around pkg-config issues (see bug report
-      # <https://bugs.freedesktop.org/show_bug.cgi?id=72584>) with
-      # multiple -isystem tags by replacing them with "-I"
-      string(REGEX REPLACE "-isystem " "-I" pc_qt_COMPILE_FLAGS "${pc_qt_COMPILE_FLAGS}")
-      message(STATUS "Qt4 pc_qt_COMPILE_FLAGS = ${pc_qt_COMPILE_FLAGS}")
-
-      # ${QT_LIBRARY_DIR} defined by above find_package(Qt4 ...) call.
-      set(qt_RPATH ${QT_LIBRARY_DIR})
-      filter_rpath(qt_RPATH)
-      #message("qt_LIBRARY_DIR = ${qt_LIBRARY_DIR}")
-      set(pc_qt_LIBRARIES_LIST "${QT_LIBRARIES}")
-      message(STATUS "Qt4 pc_qt_LIBRARIES_LIST = ${pc_qt_LIBRARIES_LIST}")
-      if(NOT ENABLE_DYNDRIVERS)
-        list(APPEND DRIVERS_LINK_FLAGS "${QT_LIBRARIES}")
-      endif(NOT ENABLE_DYNDRIVERS)
-    else(QT4_FOUND)
-      message(STATUS "WARNING: Suitable Qt4 development environment not found so trying Qt5 instead"
-        )
-      set(PLPLOT_USE_QT5 ON CACHE BOOL "Use Qt5" FORCE)
-    endif(QT4_FOUND)
-  endif(NOT PLPLOT_USE_QT5)
-
-  if(PLPLOT_USE_QT5)
-    # We are using the latest Qt5 support method, see
-    # <http://doc.qt.io/qt-5/cmake-manual.html>.
-
-    # Find needed components of Qt5.  Minimum value of the version is
-    # 5.7.1 which was available in Debian Stretch (= oldstable now)
-    # so virtually all free software distributions should have at least
-    # this version of Qt.
-    find_package(Qt5 5.7.1 COMPONENTS Svg Gui PrintSupport Widgets)
-    if(Qt5_FOUND)
-      message(STATUS "Setting PLD_epsqt to OFF since Qt5 does not support PostScript")
-      set(PLD_epsqt OFF CACHE BOOL "Enable Qt EPS device" FORCE)
-
-      # Calculate pc_qt_COMPILE_FLAGS and pc_qt_LIBRARIES_LIST
-
-      # Note that theoretically you could use execute_process and cmake
-      # --find-package option to determine these flags, but
-      # --find-package is not maintained now and might well disappear in
-      # the future, there is currently a Qt5 CMake support file bug
-      # (badly named GL library) that needs to be addressed for
-      # --find-package to work even at the moment, and also there is a
-      # Qt5 CMake support file bug such that the required macro option
-      # settings are not returned by this approach.
-
-      # Another alternative would be to use the plplotqt target properties,
-      # but translating those into simple compile and link flags is non-trivial
-      # and in fact is the issue that still needs to be addressed
-      # in order for --find-package to work properly for all varieties
-      # of target properties.
-
-      # Therefore, use a brute-force approach (determined by looking at
-      # the compile flags and link flags that CMake finally figures out
-      # to build the plplotqt library).
-
-      # MAINTENANCE: This list will need revision whenever the PLplot
-      # dependencies on the Qt5 components are revised.
-      set(Qt5_library_name_list
+  set(Qt_library_name_list
         Core
         Gui
         PrintSupport
         Widgets
         Svg
         )
+  option(PLPLOT_USE_QT6 "Use Qt6" ON)
 
-      # Determine blank-separated pc_qt_COMPILE_FLAGS
-      # If Qt5::Core INTERFACE_COMPILE_OPTIONS property is defined, need to update
-      # pc_qt_COMPILE_FLAGS accordingly.
-      get_target_property(qt5_core_interface_compile_options Qt5::Core INTERFACE_COMPILE_OPTIONS)
-      if(qt5_core_interface_compile_options)
-	set(pc_qt_COMPILE_FLAGS ${qt5_core_interface_compile_options})
+  if(NOT PLPLOT_USE_QT6)
+
+    find_package(Qt5 5.7.1 COMPONENTS Svg Gui PrintSupport Widgets)
+
+  get_target_property(qt_core_interface_compile_options Qt5::Core INTERFACE_COMPILE_OPTIONS)
+
+  endif(NOT PLPLOT_USE_QT6)
+   if(PLPLOT_USE_QT6)
+
+    find_package(Qt6 COMPONENTS Svg Gui PrintSupport Widgets)
+    get_target_property(qt_core_interface_compile_options Qt6::Core INTERFACE_COMPILE_OPTIONS)
+
+
+  endif(PLPLOT_USE_QT6)
+
+    if(qt_core_interface_compile_options)
+	set(pc_qt_COMPILE_FLAGS ${qt_core_interface_compile_options})
 	string(REGEX REPLACE ";" " " pc_qt_COMPILE_FLAGS ${pc_qt_COMPILE_FLAGS})
-      else(qt5_core_interface_compile_options)
+      else(qt_core_interface_compile_options)
 	set(pc_qt_COMPILE_FLAGS)
-      endif(qt5_core_interface_compile_options)
+      endif(qt_core_interface_compile_options)
 
-      foreach(Qt5_library_name ${Qt5_library_name_list})
-	#message(STATUS "DEBUG: Qt5${Qt5_library_name}_VERSION = ${Qt5${Qt5_library_name}_VERSION}")
-	#message(STATUS "DEBUG: Qt5${Qt5_library_name}_LIBRARIES = ${Qt5${Qt5_library_name}_LIBRARIES}")
-	#message(STATUS "DEBUG: Qt5${Qt5_library_name}_INCLUDE_DIRS = ${Qt5${Qt5_library_name}_INCLUDE_DIRS}")
-	#message(STATUS "DEBUG: Qt5${Qt5_library_name}_DEFINITIONS = ${Qt5${Qt5_library_name}_DEFINITIONS}")
-	#message(STATUS "DEBUG: Qt5${Qt5_library_name}_COMPILE_DEFINITIONS = ${Qt5${Qt5_library_name}_COMPILE_DEFINITIONS}")
-	#message(STATUS "DEBUG: Qt5${Qt5_library_name}_FOUND = ${Qt5${Qt5_library_name}_FOUND}")
-	#message(STATUS "DEBUG: Qt5${Qt5_library_name}_EXECUTABLE_COMPILE_FLAGS = ${Qt5${Qt5_library_name}_EXECUTABLE_COMPILE_FLAGS}")
-	# My experience is Qt5${Qt5_library_name}_EXECUTABLE_COMPILE_FLAGS is always empty, but just
-	# in case it is non-empty append it to pc_qt_COMPILE_FLAGS.
-	if(Qt5${Qt5_library_name}_EXECUTABLE_COMPILE_FLAGS)
+      foreach(Qt_library_name ${Qt_library_name_list})
+   if(NOT PLPLOT_USE_QT6)
+	if(Qt5${Qt_library_name}_EXECUTABLE_COMPILE_FLAGS)
 	  set(pc_qt_COMPILE_FLAGS "${pc_qt_COMPILE_FLAGS} ${Qt5${Qt5_library_name}_EXECUTABLE_COMPILE_FLAGS}")
-	endif(Qt5${Qt5_library_name}_EXECUTABLE_COMPILE_FLAGS)
-        string(TOUPPER ${Qt5_library_name} macro_core_name)
+	endif(Qt5${Qt_library_name}_EXECUTABLE_COMPILE_FLAGS)
+	endif(NOT PLPLOT_USE_QT6)
+	if(PLPLOT_USE_QT6)
+	if(Qt6${Qt_library_name}_EXECUTABLE_COMPILE_FLAGS)
+	  set(pc_qt_COMPILE_FLAGS "${pc_qt_COMPILE_FLAGS} ${Qt5${Qt5_library_name}_EXECUTABLE_COMPILE_FLAGS}")
+	endif(Qt6${Qt_library_name}_EXECUTABLE_COMPILE_FLAGS)
+	endif(PLPLOT_USE_QT6)
+
+        string(TOUPPER ${Qt_library_name} macro_core_name)
         # Set required macros so headers will be found.
         set(pc_qt_COMPILE_FLAGS "${pc_qt_COMPILE_FLAGS} -DQT_${macro_core_name}_LIB")
-        find_file(${Qt5_library_name}_header_directory Qt${Qt5_library_name} HINTS ${Qt5${Qt5_library_name}_INCLUDE_DIRS})
-        if(${Qt5_library_name}_header_directory)
-          if(${Qt5_library_name} STREQUAL "Core")
-            get_filename_component(parent_directory ${${Qt5_library_name}_header_directory} DIRECTORY)
-            set(pc_qt_COMPILE_FLAGS "${pc_qt_COMPILE_FLAGS} -I${parent_directory}")
-          endif(${Qt5_library_name} STREQUAL "Core")
-          set(pc_qt_COMPILE_FLAGS "${pc_qt_COMPILE_FLAGS} -I${${Qt5_library_name}_header_directory}")
-        else(${Qt5_library_name}_header_directory)
-          message(STATUS "${Qt5_library_name}_header_directory = ${${Qt5_library_name}_header_directory}")
-          message(FATAL_ERROR "${Qt5_library_name} header_directory not found")
-        endif(${Qt5_library_name}_header_directory)
-      endforeach(Qt5_library_name ${Qt5_library_name_list})
-      message(STATUS "Qt5 pc_qt_COMPILE_FLAGS = ${pc_qt_COMPILE_FLAGS}")
+        find_file(${Qt_library_name}_header_directory Qt${Qt_library_name} HINTS ${Qt${Qt_library_name}_INCLUDE_DIRS})
+            get_filename_component(parent_directory ${${Qt_library_name}_header_directory} DIRECTORY)
+          set(pc_qt_COMPILE_FLAGS "${pc_qt_COMPILE_FLAGS} -I/usr/include/qt6/${${Qt_library_name}}")
+     endforeach(Qt_library_name ${Qt5_library_name_list})
+      message(STATUS "Qt pc_qt_COMPILE_FLAGS = ${pc_qt_COMPILE_FLAGS}")
 
       set(pc_qt_LIBRARIES_LIST)
-      foreach(Qt5_library_name ${Qt5_library_name_list})
-        set(Qt5_library_fullpath ${Qt5${Qt5_library_name}_LIBRARIES})
-        if(Qt5_library_fullpath MATCHES "^Qt5::")
-          # This is the Qt5 convention for imported library names, and
-          # according to <http://doc.qt.io/qt-5/cmake-manual.html> the
-          # corresponding locations can be found as follows (and noting
-          # from the CMP0026 documentation and cmake-devel list discussion
-          # from Nils Gladitz that that policy only
-          # excludes using _build_ target LOCATION properties and not
-          # _imported_ target LOCATION properties like this one):
-          get_target_property(Qt5_library_fullpath ${Qt5_library_fullpath} LOCATION)
-          if(Qt5_library_fullpath)
-            list(APPEND pc_qt_LIBRARIES_LIST ${Qt5_library_fullpath})
-          endif(Qt5_library_fullpath)
-        else(Qt5_library_fullpath MATCHES "^Qt5::")
-          list(APPEND pc_qt_LIBRARIES_LIST ${Qt5_library_fullpath})
-        endif(Qt5_library_fullpath MATCHES "^Qt5::")
-      endforeach(Qt5_library_name ${Qt5_library_name_list})
+      foreach(Qt_library_name ${Qt_library_name_list})
 
-      # Convert from .so[.0-9]* form (if that is the form of the full pathname of the library) to .so
-      # form.
-      string(REGEX REPLACE "\.so[.0-9]*" ".so" pc_qt_LIBRARIES_LIST "${pc_qt_LIBRARIES_LIST}")
+    if(NOT PLPLOT_USE_QT6)
+        set(Qt_library_fullpath ${Qt5${Qt_library_name}_LIBRARIES})
+  endif(NOT PLPLOT_USE_QT6)
 
-      message(STATUS "Qt5 pc_qt_LIBRARIES_LIST = ${pc_qt_LIBRARIES_LIST}")
-    else(Qt5_FOUND)
-      message(STATUS
-        "WARNING: Suitable Qt5 development environment not found so disabling qt"
-        )
-      set(ENABLE_qt OFF CACHE BOOL "Enable Qt binding" FORCE)
-    endif(Qt5_FOUND)
-  endif(PLPLOT_USE_QT5)
+    if( PLPLOT_USE_QT6)
+    message(STATUS "WARNING: merda")
+        set(Qt_library_fullpath ${Qt6${Qt_library_name}_LIBRARIES})
+  endif(PLPLOT_USE_QT6)
+message(STATUS "WARNING: ${Qt_library_fullpath}")
+          get_target_property(Qt_library_fullpath ${Qt_library_fullpath} LOCATION)
+            list(APPEND pc_qt_LIBRARIES_LIST ${Qt_library_fullpath})
+
+  endforeach(Qt_library_name ${Qt_library_name_list})
+
 endif(ENABLE_qt)
 
 # MAINTENANCE: mention every qt device here.
