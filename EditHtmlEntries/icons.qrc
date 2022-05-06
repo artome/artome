@@ -1,0 +1,62 @@
+<RCC>
+  <qresource prefix="Icons">
+    <file>../Icons/RunsandLog.svg</file>
+    <file>../Icons/three115.svg</file>
+    <file>../Icons/book135.svg</file>
+    <file>../Icons/uploadhtml.svg</file>
+    <file>../Icons/textcolor.svg</file>
+    <file>../Icons/textBcolor.svg</file>
+    <file>../Icons/text_strike.svg</file>
+    <file>../Icons/pdf.svg</file>
+    <file>../Icons/redo11.svg</file>
+    <file>../Icons/undo12.svg</file>
+    <file>../Icons/open161.svg</file>
+    <file>../Icons/printer.svg</file>
+    <file>../Icons/color-fill.svg</file>
+    <file>../Icons/if_hen-01_2140042.svg</file>
+    <file>../Icons/text_bold.svg</file>
+    <file>../Icons/text_center.svg</file>
+    <file>../Icons/text_italic.svg</file>
+    <file>../Icons/text_left.svg</file>
+    <file>../Icons/text_right.svg</file>
+    <file>../Icons/text_under.svg</file>
+    <file>../Icons/editcut.svg</file>
+    <file>../Icons/editdelete.svg</file>
+    <file>../Icons/editcopy.svg</file>
+    <file>../Icons/floppy16.svg</file>
+    <file>../Icons/writetableTODB.svg</file>
+    <file>../Icons/brainstorming.svg</file>
+    <file>../Icons/campaign2.svg</file>
+    <file>../Icons/a9.svg</file>
+    <file>../Icons/rubber3.svg</file>
+    <file>../Icons/databse_config.svg</file>
+    <file>../Icons/gearwheels.svg</file>
+    <file>../Icons/databse.svg</file>
+    <file>../Icons/database7.svg</file>
+    <file>../Icons/cancel4.svg</file>
+    <file>../Icons/text-x-sql.svg</file>
+    <file>../Icons/EarthServer.svg</file>
+    <file>../Icons/exclamation17.svg</file>
+    <file>../Icons/Skull-Icon.svg</file>
+    <file>../Icons/Skull_and_crossbones_vector.svg</file>
+    <file>../Icons/banana4.svg</file>
+    <file>../Icons/educational15.svg</file>
+    <file>../Icons/chart15.svg</file>
+    <file>../Icons/screens.svg</file>
+    <file>../Icons/folder232.svg</file>
+    <file>../Icons/two229.svg</file>
+    <file>../Icons/two284.svg</file>
+    <file>../Icons/two254.svg</file>
+    <file>../Icons/sketched29.svg</file>
+    <file>../Icons/up81.svg</file>
+    <file>../Icons/repair6.svg</file>
+    <file>../Icons/plus7.svg</file>
+    <file>../Icons/Microsoft_Excel_2013_logo.svg</file>
+    <file>../Icons/excelitens.svg</file>
+    <file>../Icons/head21.svg</file>
+    <file>../Icons/key112.svg</file>
+    <file>../Icons/floppy1.svg</file>
+
+    
+  </qresource>
+</RCC>
