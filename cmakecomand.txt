@@ -1,0 +1,2 @@
+ 
+cmake -DCMAKE_INSTALL_PREFIX=/usr/local/plplot_suseNewdrivers  -DBUILD_TEST=ON   -DQt6_DIR=/usr/lib64/cmake/Qt6/ -DDEFAULT_NO_BINDINGS=ON -DENABLE_cxx=ON -DPLPLOT_USE_QT6=ON -DENABLE_qt=ON  ../ >& cmake.out
