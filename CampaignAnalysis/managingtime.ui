@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ManagingTime</class>
+ <widget class="QDialog" name="ManagingTime">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>495</width>
+    <height>623</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Global time managment</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../Ressources.qrc">
+    <normaloff>:/Icons/Icons/alarm27.svg</normaloff>:/Icons/Icons/alarm27.svg</iconset>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>true</bool>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_5">
+   <item row="0" column="0">
+    <layout class="QGridLayout" name="gridLayout_4">
+     <item row="0" column="0">
+      <widget class="QScrollArea" name="scrollArea">
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="scrollAreaWidgetContents">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>473</width>
+          <height>601</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="0" column="0">
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_2">
+             <item>
+              <spacer name="verticalSpacer">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="Byevents">
+               <property name="text">
+                <string>By events</string>
+               </property>
+               <property name="icon">
+                <iconset resource="../Ressources.qrc">
+                 <normaloff>:/Icons/Icons/education31.svg</normaloff>:/Icons/Icons/education31.svg</iconset>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="verticalSpacer_5">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <spacer name="verticalSpacer_3">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <spacer name="verticalSpacer_8">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="okButton">
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Only need to be pressed after manually changing the time interval.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="text">
+                <string>OK</string>
+               </property>
+               <property name="icon">
+                <iconset resource="../Ressources.qrc">
+                 <normaloff>:/Icons/Icons/check46.svg</normaloff>:/Icons/Icons/check46.svg</iconset>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="cancelButton">
+               <property name="text">
+                <string>cancel</string>
+               </property>
+               <property name="icon">
+                <iconset resource="../Ressources.qrc">
+                 <normaloff>:/Icons/Icons/cancel4.svg</normaloff>:/Icons/Icons/cancel4.svg</iconset>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="verticalSpacer_4">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="Sync">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;This is now obsolote as is disactivated. The windows, database plots, from the current active database with the button &lt;img src=&quot;:/Icons/Icons/sync.svg&quot; width=&quot;22&quot; height=&quot;22&quot;/&gt; checked will be updated to the new time without the need to press this button. They will be automatically updated a new  time is sellected.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="text">
+                <string>Sync all linked</string>
+               </property>
+               <property name="icon">
+                <iconset resource="../Ressources.qrc">
+                 <normaloff>:/Icons/Icons/sync.svg</normaloff>:/Icons/Icons/sync.svg</iconset>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout">
+             <item>
+              <widget class="QGroupBox" name="groupBox_2">
+               <property name="title">
+                <string>By run/stages</string>
+               </property>
+               <layout class="QGridLayout" name="gridLayout">
+                <item row="0" column="0">
+                 <layout class="QVBoxLayout" name="verticalLayout_3">
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_4">
+                    <item>
+                     <spacer name="horizontalSpacer_3">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="startrun">
+                      <property name="text">
+                       <string>start run</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <spacer name="horizontalSpacer_4">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_2">
+                    <item>
+                     <spacer name="horizontalSpacer">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="Rtimeselect">
+                      <property name="enabled">
+                       <bool>true</bool>
+                      </property>
+                      <property name="toolTip">
+                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Display the campaign runtable and one can linked the time with the start/end of runs and stages.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      </property>
+                      <property name="text">
+                       <string>Select time from Runs</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="../Ressources.qrc">
+                        <normaloff>:/Icons/Icons/time5.svg</normaloff>:/Icons/Icons/time5.svg</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>16</width>
+                        <height>16</height>
+                       </size>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <spacer name="horizontalSpacer_2">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_3">
+                    <item>
+                     <spacer name="horizontalSpacer_5">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="endrun">
+                      <property name="text">
+                       <string>end run</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <spacer name="horizontalSpacer_6">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QGroupBox" name="groupBox_3">
+               <property name="title">
+                <string>Setting the time interval manually</string>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_3">
+                <item row="0" column="0">
+                 <layout class="QVBoxLayout" name="verticalLayout_4">
+                  <item>
+                   <widget class="QLabel" name="label_6">
+                    <property name="text">
+                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;from&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_5">
+                    <item>
+                     <widget class="QDateEdit" name="IdateEdit">
+                      <property name="enabled">
+                       <bool>true</bool>
+                      </property>
+                      <property name="displayFormat">
+                       <string>yyyy/MM/dd</string>
+                      </property>
+                      <property name="calendarPopup">
+                       <bool>true</bool>
+                      </property>
+                      <property name="timeSpec">
+                       <enum>Qt::UTC</enum>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QTimeEdit" name="ItimeEdit">
+                      <property name="enabled">
+                       <bool>true</bool>
+                      </property>
+                      <property name="displayFormat">
+                       <string>hh:mm:ss</string>
+                      </property>
+                      <property name="timeSpec">
+                       <enum>Qt::UTC</enum>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="label_7">
+                    <property name="text">
+                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;to&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_6">
+                    <item>
+                     <widget class="QDateEdit" name="LdateEdit">
+                      <property name="enabled">
+                       <bool>true</bool>
+                      </property>
+                      <property name="displayFormat">
+                       <string>yyyy/MM/dd</string>
+                      </property>
+                      <property name="calendarPopup">
+                       <bool>true</bool>
+                      </property>
+                      <property name="timeSpec">
+                       <enum>Qt::UTC</enum>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QTimeEdit" name="LtimeEdit">
+                      <property name="enabled">
+                       <bool>true</bool>
+                      </property>
+                      <property name="displayFormat">
+                       <string>hh:mm:ss</string>
+                      </property>
+                      <property name="timeSpec">
+                       <enum>Qt::UTC</enum>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="TimeInterval">
+                    <property name="text">
+                     <string>Time Interval</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="verticalSpacer_7">
+                    <property name="orientation">
+                     <enum>Qt::Vertical</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>20</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="min20">
+                    <property name="text">
+                     <string>Last 20 mim</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="min40">
+                    <property name="text">
+                     <string>Last 40 min</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="hour">
+                    <property name="text">
+                     <string>Last hour</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="verticalSpacer_6">
+                    <property name="orientation">
+                     <enum>Qt::Vertical</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>20</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="label_2">
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="pixmap">
+                     <pixmap resource="../Ressources.qrc">:/Icons/Icons/Timewarningnew.png</pixmap>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="verticalSpacer_2">
+                    <property name="orientation">
+                     <enum>Qt::Vertical</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>20</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                 </layout>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="databasename">
+                  <property name="text">
+                   <string>TextLabel</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../Ressources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

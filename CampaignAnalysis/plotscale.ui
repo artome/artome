@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Plotscale</class>
+ <widget class="QDialog" name="Plotscale">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>386</width>
+    <height>228</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Scale Plot</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../Ressources.qrc">
+    <normaloff>:/Icons/Icons/Freescale.svg</normaloff>:/Icons/Icons/Freescale.svg</iconset>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="../Ressources.qrc">:/Icons/Icons/Freescale.svg</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>The Plot of the selected window 
+will be scaled by the specified amount. </string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>xscale</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDoubleSpinBox" name="xscale">
+             <property name="minimum">
+              <double>0.100000000000000</double>
+             </property>
+             <property name="singleStep">
+              <double>0.100000000000000</double>
+             </property>
+             <property name="value">
+              <double>1.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>yscale</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDoubleSpinBox" name="yscale">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="minimum">
+              <double>0.100000000000000</double>
+             </property>
+             <property name="singleStep">
+              <double>0.100000000000000</double>
+             </property>
+             <property name="value">
+              <double>1.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="keepratio">
+         <property name="text">
+          <string>Keep ratio</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../Ressources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>Plotscale</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>172</x>
+     <y>209</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>172</x>
+     <y>113</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>Plotscale</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>172</x>
+     <y>209</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>172</x>
+     <y>113</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

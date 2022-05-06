@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Hdpifactores</class>
+ <widget class="QDialog" name="Hdpifactores">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>356</width>
+    <height>476</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Set factores for windowws size and fonts</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../Ressources.qrc">
+    <normaloff>:/Icons/Icons/Gruunge-Halftone1--Arvin61r58.svg</normaloff>:/Icons/Icons/Gruunge-Halftone1--Arvin61r58.svg</iconset>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;Here you can set factores to apply to fonts,&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt; thickness and windowsizes &lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;to minor problems related with hdpi devices. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Scale plot fonts</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDoubleSpinBox" name="scalefonts">
+         <property name="singleStep">
+          <double>0.100000000000000</double>
+         </property>
+         <property name="value">
+          <double>1.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>increase  plot line thickness</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDoubleSpinBox" name="scalethick">
+         <property name="singleStep">
+          <double>1.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>0.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>Default plot char height</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDoubleSpinBox" name="charheight">
+         <property name="minimum">
+          <double>0.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>1.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>0.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_6">
+       <item>
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string>Dpi (plot device dpi)</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDoubleSpinBox" name="dpi">
+         <property name="minimum">
+          <double>0.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>5000000.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>90.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>0.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>scale window sizes</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDoubleSpinBox" name="scalewindows">
+         <property name="minimum">
+          <double>1.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.100000000000000</double>
+         </property>
+         <property name="value">
+          <double>1.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_7">
+       <item>
+        <widget class="QLabel" name="label_7">
+         <property name="text">
+          <string>Font windows size </string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDoubleSpinBox" name="wfontsize">
+         <property name="maximum">
+          <double>100.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="refresh">
+         <property name="text">
+          <string>default</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../Ressources.qrc">
+           <normaloff>:/Icons/Icons/refresh.svg</normaloff>:/Icons/Icons/refresh.svg</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="set">
+         <property name="text">
+          <string>Set/close</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../Ressources.qrc">
+           <normaloff>:/Icons/Icons/check46.svg</normaloff>:/Icons/Icons/check46.svg</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="store">
+         <property name="text">
+          <string>store</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../Ressources.qrc">
+           <normaloff>:/Icons/Icons/floppy1.svg</normaloff>:/Icons/Icons/floppy1.svg</iconset>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../Ressources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

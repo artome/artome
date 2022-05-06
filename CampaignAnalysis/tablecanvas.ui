@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TableCanvas</class>
+ <widget class="QMainWindow" name="TableCanvas">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>890</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Table</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../Ressources.qrc">
+    <normaloff>:/Icons/Icons/spreadsheet7.svg</normaloff>:/Icons/Icons/spreadsheet7.svg</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QSplitter" name="splitter">
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
+      </property>
+      <property name="midLineWidth">
+       <number>3</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="opaqueResize">
+       <bool>true</bool>
+      </property>
+      <property name="handleWidth">
+       <number>10</number>
+      </property>
+      <widget class="QTableView" name="tableView"/>
+      <widget class="QTabWidget" name="tabWidget">
+       <property name="currentIndex">
+        <number>1</number>
+       </property>
+       <widget class="QWidget" name="Description">
+        <attribute name="icon">
+         <iconset resource="../Ressources.qrc">
+          <normaloff>:/Icons/Icons/help14.svg</normaloff>:/Icons/Icons/help14.svg</iconset>
+        </attribute>
+        <attribute name="title">
+         <string>Description</string>
+        </attribute>
+       </widget>
+       <widget class="QWidget" name="Display">
+        <attribute name="title">
+         <string>Display format</string>
+        </attribute>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="0" column="0">
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <item>
+            <widget class="QGroupBox" name="timeoptions">
+             <property name="title">
+              <string>DateTime Format</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_2">
+              <item row="0" column="0">
+               <layout class="QVBoxLayout" name="verticalLayout_6">
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_5">
+                  <item>
+                   <layout class="QVBoxLayout" name="verticalLayout_3">
+                    <item>
+                     <widget class="QRadioButton" name="Igortime">
+                      <property name="text">
+                       <string>Igor/Lab&amp;view Time</string>
+                      </property>
+                      <property name="checked">
+                       <bool>false</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QRadioButton" name="unixtime">
+                      <property name="text">
+                       <string>Default (uni&amp;x time stamp)</string>
+                      </property>
+                      <property name="checked">
+                       <bool>false</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QRadioButton" name="TimeString">
+                      <property name="text">
+                       <string>T&amp;ime string</string>
+                      </property>
+                      <property name="checked">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QVBoxLayout" name="verticalLayout_5">
+                    <item>
+                     <spacer name="verticalSpacer_3">
+                      <property name="orientation">
+                       <enum>Qt::Vertical</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>20</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="Applydisplayformat">
+                      <property name="toolTip">
+                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;Not evereyone uses Igor. So if you press this button next time your defaults will be the options that you are selected.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      </property>
+                      <property name="text">
+                       <string>Apply</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="../Ressources.qrc">
+                        <normaloff>:/Icons/Icons/refresh19.svg</normaloff>:/Icons/Icons/refresh19.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <spacer name="verticalSpacer_4">
+                      <property name="orientation">
+                       <enum>Qt::Vertical</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>20</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_3">
+                  <item>
+                   <widget class="QLabel" name="datelabel">
+                    <property name="text">
+                     <string>Date Format</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLineEdit" name="datef">
+                    <property name="enabled">
+                     <bool>false</bool>
+                    </property>
+                    <property name="text">
+                     <string>yyyy/MM/dd hh:mm:ss</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="horizontalSpacer_2">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <widget class="QComboBox" name="sometexttimeformats">
+                    <property name="toolTip">
+                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;Here you can select some predefined DateTime string formats. If the format you want is not available you can write it , by hand, in the left box&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    </property>
+                    <property name="sizeAdjustPolicy">
+                     <enum>QComboBox::AdjustToContents</enum>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="formula">
+        <attribute name="icon">
+         <iconset resource="../Ressources.qrc">
+          <normaloff>:/Icons/Icons/paper101.svg</normaloff>:/Icons/Icons/paper101.svg</iconset>
+        </attribute>
+        <attribute name="title">
+         <string>Formula</string>
+        </attribute>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>890</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuSome_aditional_actions">
+    <property name="title">
+     <string>actio&amp;ns</string>
+    </property>
+    <addaction name="actionSave_into_database"/>
+    <addaction name="actionSurface_Plot"/>
+    <addaction name="actionMake_a_plot"/>
+    <addaction name="actionChoose_columns_to_plot"/>
+    <addaction name="actionLocal_Polynomial_fit"/>
+    <addaction name="separator"/>
+    <addaction name="actionColumn_Statistics"/>
+    <addaction name="separator"/>
+    <addaction name="actionSave_into_local_drive"/>
+   </widget>
+   <addaction name="menuSome_aditional_actions"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionSave_into_database">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Ressources.qrc">
+     <normaloff>:/Icons/Icons/Uparrow.svg</normaloff>:/Icons/Icons/Uparrow.svg</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Save into database</string>
+   </property>
+   <property name="toolTip">
+    <string>Save this table into an existente table or in a new table</string>
+   </property>
+  </action>
+  <action name="actionSurface_Plot">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Ressources.qrc">
+     <normaloff>:/Icons/Icons/banana4.svg</normaloff>:/Icons/Icons/banana4.svg</iconset>
+   </property>
+   <property name="text">
+    <string>surface &amp;Plot</string>
+   </property>
+  </action>
+  <action name="actionMake_a_plot">
+   <property name="icon">
+    <iconset resource="../Ressources.qrc">
+     <normaloff>:/Icons/Icons/educational15.svg</normaloff>:/Icons/Icons/educational15.svg</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Make a plot</string>
+   </property>
+   <property name="toolTip">
+    <string>Make a plot of selected itens</string>
+   </property>
+  </action>
+  <action name="actionChoose_columns_to_plot">
+   <property name="icon">
+    <iconset resource="../Ressources.qrc">
+     <normaloff>:/Icons/Icons/morecurves.svg</normaloff>:/Icons/Icons/morecurves.svg</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Choose columns to plot</string>
+   </property>
+   <property name="toolTip">
+    <string>Cossinf columns to plot.</string>
+   </property>
+  </action>
+  <action name="actionSave_into_local_drive">
+   <property name="icon">
+    <iconset resource="../Ressources.qrc">
+     <normaloff>:/Icons/Icons/floppy16.svg</normaloff>:/Icons/Icons/floppy16.svg</iconset>
+   </property>
+   <property name="text">
+    <string>save &amp;into local drive</string>
+   </property>
+  </action>
+  <action name="actionColumn_Statistics">
+   <property name="icon">
+    <iconset resource="../Ressources.qrc">
+     <normaloff>:/Icons/Icons/accessories-calculator.svg</normaloff>:/Icons/Icons/accessories-calculator.svg</iconset>
+   </property>
+   <property name="text">
+    <string>C&amp;olumn Statistics</string>
+   </property>
+   <property name="toolTip">
+    <string>Some Column elementar stats </string>
+   </property>
+  </action>
+  <action name="actionLocal_Polynomial_fit">
+   <property name="text">
+    <string>&amp;Local Polynomial fit</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../Ressources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

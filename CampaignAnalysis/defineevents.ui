@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DefineEvents</class>
+ <widget class="QDialog" name="DefineEvents">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>819</width>
+    <height>654</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Add/Edit Events</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../Ressources.qrc">
+    <normaloff>:/Icons/Icons/education31.svg</normaloff>:/Icons/Icons/education31.svg</iconset>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout_7">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_8">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_6">
+         <item>
+          <widget class="QPushButton" name="loadevents">
+           <property name="text">
+            <string>Load events file</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../Ressources.qrc">
+             <normaloff>:/Icons/Icons/education31.svg</normaloff>:/Icons/Icons/education31.svg</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTreeView" name="eventstoload"/>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_7">
+           <item>
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="commitevent">
+             <property name="text">
+              <string>Commit Event</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QTextBrowser" name="textBrowser"/>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_8">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_6">
+           <item>
+            <widget class="QPushButton" name="removeevent">
+             <property name="text">
+              <string>Remove selected event </string>
+             </property>
+             <property name="icon">
+              <iconset resource="../Ressources.qrc">
+               <normaloff>:/Icons/Icons/bomb1.svg</normaloff>:/Icons/Icons/bomb1.svg</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="refresh">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="../Ressources.qrc">
+               <normaloff>:/Icons/Icons/refresh.svg</normaloff>:/Icons/Icons/refresh.svg</iconset>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QTreeView" name="storedevents"/>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <item>
+            <spacer name="horizontalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="EditEvents">
+             <property name="text">
+              <string>Edit events</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../Ressources.qrc">
+               <normaloff>:/Icons/Icons/repair6.svg</normaloff>:/Icons/Icons/repair6.svg</iconset>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <item>
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>Event Start</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDateTimeEdit" name="start">
+             <property name="displayFormat">
+              <string>yyyy/MM/dd hh:mm:ss</string>
+             </property>
+             <property name="timeSpec">
+              <enum>Qt::UTC</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>Event End</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDateTimeEdit" name="end">
+             <property name="displayFormat">
+              <string>yyyy/MM/dd hh:mm:ss</string>
+             </property>
+             <property name="timeSpec">
+              <enum>Qt::UTC</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <widget class="QLabel" name="label_3">
+             <property name="text">
+              <string>Event Name</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="RunNumber"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <item>
+            <widget class="QLabel" name="label_4">
+             <property name="text">
+              <string>Event Type</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="Type"/>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QLabel" name="label_5">
+           <property name="text">
+            <string>Description</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="Description"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QLabel" name="label_6">
+           <property name="text">
+            <string>Comments</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="Comments"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="updateevent">
+           <property name="text">
+            <string>Update Event</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../Ressources.qrc">
+             <normaloff>:/Icons/Icons/floppy1.svg</normaloff>:/Icons/Icons/floppy1.svg</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="spinBox">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="minimum">
+            <number>-1</number>
+           </property>
+           <property name="maximum">
+            <number>9999</number>
+           </property>
+           <property name="value">
+            <number>-1</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="AddButton">
+           <property name="text">
+            <string>Add Event</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../Ressources.qrc">
+             <normaloff>:/Icons/Icons/plus55.svg</normaloff>:/Icons/Icons/plus55.svg</iconset>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../Ressources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

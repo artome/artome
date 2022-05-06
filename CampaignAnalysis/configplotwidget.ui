@@ -1,0 +1,1922 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>configplotwidget</class>
+ <widget class="QDialog" name="configplotwidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>866</width>
+    <height>856</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Configure plot</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../Ressources.qrc">
+    <normaloff>:/Icons/Icons/repair6B.svg</normaloff>:/Icons/Icons/repair6B.svg</iconset>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_5">
+   <item row="0" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout_16">
+     <item>
+      <widget class="QScrollArea" name="scrollArea">
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="scrollAreaWidgetContents">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>844</width>
+          <height>800</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="0" column="0">
+          <layout class="QVBoxLayout" name="verticalLayout_14">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_8">
+             <item>
+              <widget class="QSplitter" name="splitter">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <widget class="QWidget" name="layoutWidget">
+                <layout class="QVBoxLayout" name="verticalLayout_7">
+                 <item>
+                  <widget class="QTreeView" name="treeView"/>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_14">
+                   <item>
+                    <spacer name="horizontalSpacer">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_4">
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="pixmap">
+                      <pixmap resource="../Ressources.qrc">:/Icons/Icons/ploteditpicture.png</pixmap>
+                     </property>
+                     <property name="scaledContents">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="horizontalSpacer_2">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QTabWidget" name="CSHproprieties">
+                <property name="currentIndex">
+                 <number>1</number>
+                </property>
+                <widget class="QWidget" name="tab">
+                 <attribute name="icon">
+                  <iconset resource="../Ressources.qrc">
+                   <normaloff>:/Icons/Icons/wink2.svg</normaloff>:/Icons/Icons/wink2.svg</iconset>
+                 </attribute>
+                 <attribute name="title">
+                  <string/>
+                 </attribute>
+                 <layout class="QGridLayout" name="gridLayout_12">
+                  <item row="0" column="0">
+                   <layout class="QHBoxLayout" name="horizontalLayout_44">
+                    <item>
+                     <spacer name="horizontalSpacer_16">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item>
+                     <layout class="QVBoxLayout" name="verticalLayout_17">
+                      <item>
+                       <spacer name="verticalSpacer_8">
+                        <property name="orientation">
+                         <enum>Qt::Vertical</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>20</width>
+                          <height>40</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_27">
+                        <property name="minimumSize">
+                         <size>
+                          <width>299</width>
+                          <height>300</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="pixmap">
+                         <pixmap resource="../Ressources.qrc">:/Icons/Icons/repair6.svg</pixmap>
+                        </property>
+                        <property name="scaledContents">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <spacer name="verticalSpacer_9">
+                        <property name="orientation">
+                         <enum>Qt::Vertical</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>20</width>
+                          <height>40</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <spacer name="horizontalSpacer_17">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QWidget" name="global">
+                 <attribute name="icon">
+                  <iconset resource="../Ressources.qrc">
+                   <normaloff>:/Icons/Icons/repair6B.svg</normaloff>:/Icons/Icons/repair6B.svg</iconset>
+                 </attribute>
+                 <attribute name="title">
+                  <string>Global options</string>
+                 </attribute>
+                 <layout class="QGridLayout" name="gridLayout_11">
+                  <item row="0" column="0">
+                   <layout class="QVBoxLayout" name="verticalLayout_18">
+                    <item>
+                     <widget class="QGroupBox" name="pagebackground">
+                      <property name="title">
+                       <string>Pagebackground </string>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_8">
+                       <item row="0" column="0">
+                        <layout class="QVBoxLayout" name="verticalLayout_11">
+                         <item>
+                          <layout class="QHBoxLayout" name="horizontalLayout_24">
+                           <item>
+                            <layout class="QHBoxLayout" name="horizontalLayout_23">
+                             <item>
+                              <widget class="QLabel" name="label_15">
+                               <property name="text">
+                                <string>Background color </string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QPushButton" name="backcolor">
+                               <property name="text">
+                                <string>color</string>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </item>
+                           <item>
+                            <spacer name="horizontalSpacer_9">
+                             <property name="orientation">
+                              <enum>Qt::Horizontal</enum>
+                             </property>
+                             <property name="sizeHint" stdset="0">
+                              <size>
+                               <width>40</width>
+                               <height>20</height>
+                              </size>
+                             </property>
+                            </spacer>
+                           </item>
+                           <item>
+                            <layout class="QHBoxLayout" name="horizontalLayout_17">
+                             <item>
+                              <widget class="QLabel" name="label_19">
+                               <property name="text">
+                                <string>alpha value</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QDoubleSpinBox" name="alphavalue">
+                               <property name="toolTip">
+                                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;if you put this value to zero (then the Backgroud color would be irrelevant) you can have solid png.&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;The name can be strange and most likely you would prefear to hear transparent plots.&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;If you have a surface with a color legend inside you can get nice results playing with this value, as you can still see the surface structure behind the color legend.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                               </property>
+                               <property name="maximum">
+                                <double>1.000000000000000</double>
+                               </property>
+                               <property name="singleStep">
+                                <double>0.100000000000000</double>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </item>
+                          </layout>
+                         </item>
+                        </layout>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QGroupBox" name="subpageoptions">
+                      <property name="title">
+                       <string>                       ----------Subpage ## --------------                   type of axis  and title and fonts</string>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_9">
+                       <item row="0" column="0">
+                        <layout class="QVBoxLayout" name="verticalLayout_13">
+                         <item>
+                          <layout class="QVBoxLayout" name="verticalLayout_10">
+                           <item>
+                            <layout class="QHBoxLayout" name="horizontalLayout_22">
+                             <item>
+                              <layout class="QHBoxLayout" name="horizontalLayout_20">
+                               <item>
+                                <widget class="QLabel" name="label_17">
+                                 <property name="text">
+                                  <string>Font set</string>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QComboBox" name="font">
+                                 <property name="iconSize">
+                                  <size>
+                                   <width>115</width>
+                                   <height>9</height>
+                                  </size>
+                                 </property>
+                                </widget>
+                               </item>
+                              </layout>
+                             </item>
+                             <item>
+                              <spacer name="horizontalSpacer_5">
+                               <property name="orientation">
+                                <enum>Qt::Horizontal</enum>
+                               </property>
+                               <property name="sizeHint" stdset="0">
+                                <size>
+                                 <width>40</width>
+                                 <height>20</height>
+                                </size>
+                               </property>
+                              </spacer>
+                             </item>
+                             <item>
+                              <layout class="QHBoxLayout" name="horizontalLayout_21">
+                               <item>
+                                <widget class="QLabel" name="label_18">
+                                 <property name="text">
+                                  <string>Font size</string>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QDoubleSpinBox" name="fontsize"/>
+                               </item>
+                              </layout>
+                             </item>
+                             <item>
+                              <spacer name="horizontalSpacer_7">
+                               <property name="orientation">
+                                <enum>Qt::Horizontal</enum>
+                               </property>
+                               <property name="sizeHint" stdset="0">
+                                <size>
+                                 <width>40</width>
+                                 <height>20</height>
+                                </size>
+                               </property>
+                              </spacer>
+                             </item>
+                            </layout>
+                           </item>
+                           <item>
+                            <layout class="QHBoxLayout" name="horizontalLayout_19">
+                             <item>
+                              <widget class="QLabel" name="plottitlelabel">
+                               <property name="text">
+                                <string>Subpage title</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QLineEdit" name="plottitle"/>
+                             </item>
+                            </layout>
+                           </item>
+                           <item>
+                            <layout class="QHBoxLayout" name="horizontalLayout_18">
+                             <item>
+                              <widget class="QCheckBox" name="firsttimelabel">
+                               <property name="text">
+                                <string>firsttimelabel</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <spacer name="horizontalSpacer_11">
+                               <property name="orientation">
+                                <enum>Qt::Horizontal</enum>
+                               </property>
+                               <property name="sizeHint" stdset="0">
+                                <size>
+                                 <width>40</width>
+                                 <height>20</height>
+                                </size>
+                               </property>
+                              </spacer>
+                             </item>
+                             <item>
+                              <widget class="QCheckBox" name="withtimeaxis">
+                               <property name="text">
+                                <string>with time axis</string>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </item>
+                           <item>
+                            <layout class="QHBoxLayout" name="horizontalLayout_36">
+                             <item>
+                              <layout class="QHBoxLayout" name="horizontalLayout_25">
+                               <item>
+                                <widget class="QLabel" name="label_20">
+                                 <property name="text">
+                                  <string>Xvmin</string>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QDoubleSpinBox" name="xvmin">
+                                 <property name="maximum">
+                                  <double>1.000000000000000</double>
+                                 </property>
+                                 <property name="singleStep">
+                                  <double>0.100000000000000</double>
+                                 </property>
+                                </widget>
+                               </item>
+                              </layout>
+                             </item>
+                             <item>
+                              <layout class="QHBoxLayout" name="horizontalLayout_26">
+                               <item>
+                                <spacer name="horizontalSpacer_13">
+                                 <property name="orientation">
+                                  <enum>Qt::Horizontal</enum>
+                                 </property>
+                                 <property name="sizeHint" stdset="0">
+                                  <size>
+                                   <width>40</width>
+                                   <height>20</height>
+                                  </size>
+                                 </property>
+                                </spacer>
+                               </item>
+                               <item>
+                                <widget class="QLabel" name="label_21">
+                                 <property name="text">
+                                  <string>Xvmax</string>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QDoubleSpinBox" name="xvmax">
+                                 <property name="maximum">
+                                  <double>1.000000000000000</double>
+                                 </property>
+                                 <property name="singleStep">
+                                  <double>0.100000000000000</double>
+                                 </property>
+                                </widget>
+                               </item>
+                              </layout>
+                             </item>
+                             <item>
+                              <spacer name="horizontalSpacer_14">
+                               <property name="orientation">
+                                <enum>Qt::Horizontal</enum>
+                               </property>
+                               <property name="sizeHint" stdset="0">
+                                <size>
+                                 <width>40</width>
+                                 <height>20</height>
+                                </size>
+                               </property>
+                              </spacer>
+                             </item>
+                             <item>
+                              <layout class="QHBoxLayout" name="horizontalLayout_27">
+                               <item>
+                                <widget class="QLabel" name="label_22">
+                                 <property name="text">
+                                  <string>Yvmin</string>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QDoubleSpinBox" name="yvmin">
+                                 <property name="maximum">
+                                  <double>1.000000000000000</double>
+                                 </property>
+                                 <property name="singleStep">
+                                  <double>0.100000000000000</double>
+                                 </property>
+                                </widget>
+                               </item>
+                              </layout>
+                             </item>
+                             <item>
+                              <layout class="QHBoxLayout" name="horizontalLayout_28">
+                               <item>
+                                <spacer name="horizontalSpacer_15">
+                                 <property name="orientation">
+                                  <enum>Qt::Horizontal</enum>
+                                 </property>
+                                 <property name="sizeHint" stdset="0">
+                                  <size>
+                                   <width>40</width>
+                                   <height>20</height>
+                                  </size>
+                                 </property>
+                                </spacer>
+                               </item>
+                               <item>
+                                <widget class="QLabel" name="label_23">
+                                 <property name="text">
+                                  <string>Yvmax</string>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QDoubleSpinBox" name="yvmax">
+                                 <property name="maximum">
+                                  <double>1.000000000000000</double>
+                                 </property>
+                                 <property name="singleStep">
+                                  <double>0.100000000000000</double>
+                                 </property>
+                                </widget>
+                               </item>
+                              </layout>
+                             </item>
+                            </layout>
+                           </item>
+                          </layout>
+                         </item>
+                         <item>
+                          <layout class="QHBoxLayout" name="horizontalLayout_32">
+                           <item>
+                            <widget class="QCheckBox" name="Gridx">
+                             <property name="toolTip">
+                              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked a vertical grid will be displayed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                             </property>
+                             <property name="text">
+                              <string>Gridx</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QCheckBox" name="Gridy">
+                             <property name="toolTip">
+                              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked an horizontal grid will be displayed.&lt;/p&gt;&lt;p&gt;To avoid confusion it will be a grid linked with the first left &lt;span style=&quot; font-style:italic;&quot;&gt;y axis&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                             </property>
+                             <property name="text">
+                              <string>Gridy</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QGroupBox" name="groupBox_4">
+                             <property name="title">
+                              <string>Displaying runs start</string>
+                             </property>
+                             <layout class="QGridLayout" name="gridLayout_17">
+                              <item row="0" column="0">
+                               <layout class="QHBoxLayout" name="horizontalLayout_33">
+                                <item>
+                                 <widget class="QRadioButton" name="runstart">
+                                  <property name="enabled">
+                                   <bool>true</bool>
+                                  </property>
+                                  <property name="text">
+                                   <string>&amp;yes</string>
+                                  </property>
+                                  <property name="checked">
+                                   <bool>true</bool>
+                                  </property>
+                                 </widget>
+                                </item>
+                                <item>
+                                 <widget class="QRadioButton" name="onlymiddle">
+                                  <property name="enabled">
+                                   <bool>true</bool>
+                                  </property>
+                                  <property name="text">
+                                   <string>&amp;Not at borders</string>
+                                  </property>
+                                 </widget>
+                                </item>
+                                <item>
+                                 <widget class="QRadioButton" name="norunstart">
+                                  <property name="text">
+                                   <string>no</string>
+                                  </property>
+                                  <property name="checked">
+                                   <bool>false</bool>
+                                  </property>
+                                 </widget>
+                                </item>
+                               </layout>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                          </layout>
+                         </item>
+                        </layout>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QGroupBox" name="globaltyoption">
+                      <property name="title">
+                       <string>ty plot global options</string>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_10">
+                       <item row="0" column="0">
+                        <layout class="QVBoxLayout" name="verticalLayout_12">
+                         <item>
+                          <widget class="QGroupBox" name="groupBox_9">
+                           <property name="title">
+                            <string>Axis type</string>
+                           </property>
+                           <layout class="QGridLayout" name="gridLayout_20">
+                            <item row="0" column="0">
+                             <layout class="QHBoxLayout" name="horizontalLayout_34">
+                              <item>
+                               <widget class="QRadioButton" name="singleaxis">
+                                <property name="toolTip">
+                                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;All data vectores will be ploted with a single y axis&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                                </property>
+                                <property name="text">
+                                 <string>Single axis</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QRadioButton" name="multiaxis">
+                                <property name="toolTip">
+                                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;All data vectores will have its own&lt;span style=&quot; font-style:italic;&quot;&gt; y axis&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;In the curves proprieties tab one can decide the horizontal place (right or left) of the&lt;span style=&quot; font-style:italic;&quot;&gt; y axis&lt;/span&gt;. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                                </property>
+                                <property name="text">
+                                 <string>&amp;Multiaxis</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QRadioButton" name="twoaxis">
+                                <property name="toolTip">
+                                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;There will be only two axis one on the left and the one on the right.&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;In the curves proprieties tab one can decide the distribuition os the data vectores among this set of axis. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                                </property>
+                                <property name="text">
+                                 <string>Two a&amp;xis</string>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                         <item>
+                          <layout class="QHBoxLayout" name="horizontalLayout_47">
+                           <item>
+                            <widget class="QLabel" name="label_33">
+                             <property name="text">
+                              <string>multiaxissep</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLineEdit" name="multiaxissep"/>
+                           </item>
+                           <item>
+                            <spacer name="horizontalSpacer_18">
+                             <property name="orientation">
+                              <enum>Qt::Horizontal</enum>
+                             </property>
+                             <property name="sizeHint" stdset="0">
+                              <size>
+                               <width>40</width>
+                               <height>20</height>
+                              </size>
+                             </property>
+                            </spacer>
+                           </item>
+                           <item>
+                            <widget class="QLabel" name="label_34">
+                             <property name="text">
+                              <string>ylabelsep</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLineEdit" name="labelsep"/>
+                           </item>
+                          </layout>
+                         </item>
+                        </layout>
+                       </item>
+                       <item row="1" column="0">
+                        <layout class="QHBoxLayout" name="horizontalLayout_45">
+                         <item>
+                          <widget class="QCheckBox" name="allleftaxisvaluesflag">
+                           <property name="text">
+                            <string>leftaxis fixed axis values</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="allfetaxisvalues">
+                           <property name="enabled">
+                            <bool>false</bool>
+                           </property>
+                           <property name="toolTip">
+                            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;put a textstring in the for label;ymin:ymax;type (type is log or linear)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item row="3" column="0">
+                        <layout class="QHBoxLayout" name="horizontalLayout_46">
+                         <item>
+                          <widget class="QCheckBox" name="allrightaxisvaluesflag">
+                           <property name="text">
+                            <string>Rightaxis fixed axis values</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="allrightaxisvalues">
+                           <property name="enabled">
+                            <bool>false</bool>
+                           </property>
+                           <property name="toolTip">
+                            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;put a textstring in the for label;ymin:ymax;type (type is log or linear)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <spacer name="verticalSpacer_7">
+                      <property name="orientation">
+                       <enum>Qt::Vertical</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>560</width>
+                        <height>28</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QWidget" name="curves">
+                 <attribute name="icon">
+                  <iconset resource="../Ressources.qrc">
+                   <normaloff>:/Icons/Icons/line2.svg</normaloff>:/Icons/Icons/line2.svg</iconset>
+                 </attribute>
+                 <attribute name="title">
+                  <string>Curves proprieties</string>
+                 </attribute>
+                 <layout class="QGridLayout" name="gridLayout_21">
+                  <item row="0" column="0">
+                   <layout class="QVBoxLayout" name="verticalLayout_21">
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout">
+                      <item>
+                       <widget class="QLabel" name="label">
+                        <property name="text">
+                         <string>Label</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLineEdit" name="clabel"/>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_39">
+                      <item>
+                       <widget class="QGroupBox" name="groupBox">
+                        <property name="title">
+                         <string>Axis side</string>
+                        </property>
+                        <layout class="QFormLayout" name="formLayout">
+                         <property name="fieldGrowthPolicy">
+                          <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+                         </property>
+                         <item row="0" column="0">
+                          <widget class="QRadioButton" name="left">
+                           <property name="text">
+                            <string>&amp;left</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="0" column="1">
+                          <widget class="QRadioButton" name="right">
+                           <property name="text">
+                            <string>&amp;right</string>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QGroupBox" name="groupBox_2">
+                        <property name="title">
+                         <string>Axis type</string>
+                        </property>
+                        <layout class="QFormLayout" name="formLayout_2">
+                         <item row="0" column="0">
+                          <widget class="QRadioButton" name="log">
+                           <property name="text">
+                            <string>log</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="0" column="1">
+                          <widget class="QRadioButton" name="linear">
+                           <property name="text">
+                            <string>linear</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="1" column="1">
+                          <widget class="QLineEdit" name="yfactor"/>
+                         </item>
+                         <item row="1" column="0">
+                          <widget class="QLabel" name="label_30">
+                           <property name="text">
+                            <string>yfactor</string>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QGroupBox" name="groupBox_3">
+                        <property name="toolTip">
+                         <string>Curves can be plotted alone (no smooth option) with a mov averaged forward and backwards using the number of points displayed. For very noise data can be usefull only to plot the moving average (Only Mov.aver option). Or instead the curve a derivative can be plotted. The derivative is evalueted for each point as the linear regression using the points displayed forward and backward. </string>
+                        </property>
+                        <property name="title">
+                         <string>smooth/derivative</string>
+                        </property>
+                        <layout class="QGridLayout" name="gridLayout_7">
+                         <item row="0" column="0">
+                          <layout class="QVBoxLayout" name="verticalLayout_9">
+                           <item>
+                            <layout class="QHBoxLayout" name="horizontalLayout_6">
+                             <item>
+                              <widget class="QRadioButton" name="derivative">
+                               <property name="toolTip">
+                                <string>As the derivative is evaluated in the process of downloading data check or uncheck this option it takes in in effect only after the first change of the time interval displyed.</string>
+                               </property>
+                               <property name="text">
+                                <string>deri&amp;vative</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QRadioButton" name="smooth">
+                               <property name="text">
+                                <string>&amp;Mov.Aver.</string>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </item>
+                           <item>
+                            <layout class="QHBoxLayout" name="horizontalLayout_37">
+                             <item>
+                              <widget class="QRadioButton" name="onlysmooth">
+                               <property name="toolTip">
+                                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Warning when smothing with log scales the values bellow the xmin does not count for the log mean value evaluation. and the mean is only made if at least near 70% of the moving average interval is above the ymin value.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                               </property>
+                               <property name="text">
+                                <string>Onl&amp;y Mov.aver</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QRadioButton" name="nosmooth">
+                               <property name="text">
+                                <string>&amp;No smooth</string>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </item>
+                           <item>
+                            <layout class="QHBoxLayout" name="horizontalLayout_38">
+                             <item>
+                              <widget class="QLabel" name="label_28">
+                               <property name="text">
+                                <string>Points deriv/smoth</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QSpinBox" name="averagepoints">
+                               <property name="toolTip">
+                                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of data neaby points to perform the moving average&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                               </property>
+                               <property name="maximum">
+                                <number>999</number>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </item>
+                          </layout>
+                         </item>
+                        </layout>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <spacer name="verticalSpacer_3">
+                      <property name="orientation">
+                       <enum>Qt::Vertical</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>20</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_16">
+                      <item>
+                       <layout class="QVBoxLayout" name="verticalLayout_4">
+                        <item>
+                         <widget class="QLabel" name="label_10">
+                          <property name="text">
+                           <string>Line type</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QComboBox" name="linetype">
+                          <property name="iconSize">
+                           <size>
+                            <width>60</width>
+                            <height>5</height>
+                           </size>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                      <item>
+                       <layout class="QVBoxLayout" name="verticalLayout_5">
+                        <item>
+                         <widget class="QLabel" name="label_11">
+                          <property name="text">
+                           <string>Thickness</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QComboBox" name="thickness">
+                          <property name="iconSize">
+                           <size>
+                            <width>40</width>
+                            <height>16</height>
+                           </size>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                      <item>
+                       <layout class="QGridLayout" name="gridLayout_3">
+                        <item row="0" column="0" colspan="2">
+                         <layout class="QHBoxLayout" name="horizontalLayout_2">
+                          <item>
+                           <widget class="QLabel" name="label_12">
+                            <property name="text">
+                             <string>Markers</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <spacer name="horizontalSpacer_3">
+                            <property name="orientation">
+                             <enum>Qt::Horizontal</enum>
+                            </property>
+                            <property name="sizeHint" stdset="0">
+                             <size>
+                              <width>40</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                           </spacer>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="label_13">
+                            <property name="text">
+                             <string>Scale</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <spacer name="horizontalSpacer_4">
+                            <property name="orientation">
+                             <enum>Qt::Horizontal</enum>
+                            </property>
+                            <property name="sizeHint" stdset="0">
+                             <size>
+                              <width>40</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                           </spacer>
+                          </item>
+                         </layout>
+                        </item>
+                        <item row="1" column="0">
+                         <widget class="QComboBox" name="markers"/>
+                        </item>
+                        <item row="1" column="1">
+                         <widget class="QDoubleSpinBox" name="MarkersScale">
+                          <property name="maximum">
+                           <double>10.000000000000000</double>
+                          </property>
+                          <property name="value">
+                           <double>2.000000000000000</double>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                      <item>
+                       <layout class="QVBoxLayout" name="verticalLayout_6">
+                        <item>
+                         <widget class="QLabel" name="label_14">
+                          <property name="text">
+                           <string>Color</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QPushButton" name="color">
+                          <property name="text">
+                           <string>color</string>
+                          </property>
+                          <property name="iconSize">
+                           <size>
+                            <width>16</width>
+                            <height>16</height>
+                           </size>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_5">
+                      <item>
+                       <layout class="QHBoxLayout" name="horizontalLayout_4">
+                        <item>
+                         <widget class="QCheckBox" name="minfreelimits">
+                          <property name="toolTip">
+                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the min and max value of the y axis will be set according to the maximum and minimum values of the data vector.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          </property>
+                          <property name="text">
+                           <string>Dynamic limits</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLabel" name="label_2">
+                          <property name="text">
+                           <string>Min</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLineEdit" name="min">
+                          <property name="toolTip">
+                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimum value for the y axis. Will be fixed if &lt;span style=&quot; font-weight:600; font-style:italic;&quot;&gt;Dynamic limit&lt;/span&gt;s is not checked.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                      <item>
+                       <layout class="QHBoxLayout" name="horizontalLayout_3">
+                        <item>
+                         <widget class="QCheckBox" name="maxfreelimits">
+                          <property name="toolTip">
+                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked the min and max value of the y axis will be set according to the maximum and minimum values of the data vector.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          </property>
+                          <property name="text">
+                           <string>Dynamic limits</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLabel" name="label_3">
+                          <property name="text">
+                           <string>Max</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLineEdit" name="max">
+                          <property name="toolTip">
+                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximum value for the y axis. Will be fixed if &lt;span style=&quot; font-weight:600; font-style:italic;&quot;&gt;Dynamic limit&lt;/span&gt;s is not checked.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <spacer name="verticalSpacer_6">
+                      <property name="orientation">
+                       <enum>Qt::Vertical</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>20</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item>
+                     <spacer name="verticalSpacer_5">
+                      <property name="orientation">
+                       <enum>Qt::Vertical</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>20</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item>
+                     <spacer name="verticalSpacer_2">
+                      <property name="orientation">
+                       <enum>Qt::Vertical</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>20</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item>
+                     <spacer name="verticalSpacer">
+                      <property name="orientation">
+                       <enum>Qt::Vertical</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>20</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QWidget" name="surface">
+                 <attribute name="icon">
+                  <iconset resource="../Ressources.qrc">
+                   <normaloff>:/Icons/Icons/pictured1.svg</normaloff>:/Icons/Icons/pictured1.svg</iconset>
+                 </attribute>
+                 <attribute name="title">
+                  <string>Surface proprieties</string>
+                 </attribute>
+                 <layout class="QGridLayout" name="gridLayout_16">
+                  <item row="0" column="0">
+                   <layout class="QVBoxLayout" name="verticalLayout_20">
+                    <item>
+                     <layout class="QVBoxLayout" name="verticalLayout_19">
+                      <item>
+                       <layout class="QHBoxLayout" name="horizontalLayout_49">
+                        <item>
+                         <widget class="QLabel" name="label_9">
+                          <property name="text">
+                           <string>Y axis label</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLineEdit" name="slabel"/>
+                        </item>
+                       </layout>
+                      </item>
+                      <item>
+                       <layout class="QHBoxLayout" name="horizontalLayout_40">
+                        <item>
+                         <spacer name="horizontalSpacer_19">
+                          <property name="orientation">
+                           <enum>Qt::Horizontal</enum>
+                          </property>
+                          <property name="sizeHint" stdset="0">
+                           <size>
+                            <width>40</width>
+                            <height>20</height>
+                           </size>
+                          </property>
+                         </spacer>
+                        </item>
+                        <item>
+                         <widget class="QLabel" name="label_36">
+                          <property name="text">
+                           <string>surface identifier</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLineEdit" name="surfaceid"/>
+                        </item>
+                       </layout>
+                      </item>
+                      <item>
+                       <layout class="QHBoxLayout" name="horizontalLayout_15">
+                        <item>
+                         <spacer name="horizontalSpacer_10">
+                          <property name="orientation">
+                           <enum>Qt::Horizontal</enum>
+                          </property>
+                          <property name="sizeHint" stdset="0">
+                           <size>
+                            <width>40</width>
+                            <height>20</height>
+                           </size>
+                          </property>
+                         </spacer>
+                        </item>
+                        <item>
+                         <widget class="QLabel" name="label_32">
+                          <property name="text">
+                           <string>Scale</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLineEdit" name="BananaScale"/>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <layout class="QGridLayout" name="gridLayout_13">
+                      <item row="0" column="0">
+                       <widget class="QGroupBox" name="Colorscheme">
+                        <property name="toolTip">
+                         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;Color scheme of the surface.&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;You can choose from several default schemes or you can build one of your ownn and then save it.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                        </property>
+                        <property name="title">
+                         <string>Color scheme</string>
+                        </property>
+                        <layout class="QGridLayout" name="gridLayout_4">
+                         <item row="0" column="0">
+                          <layout class="QVBoxLayout" name="verticalLayout_2">
+                           <item>
+                            <layout class="QHBoxLayout" name="horizontalLayout_7">
+                             <item>
+                              <widget class="QPushButton" name="savescheme">
+                               <property name="text">
+                                <string>save</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QLabel" name="label_7">
+                               <property name="text">
+                                <string>ColorScheme</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QLineEdit" name="colorscheme">
+                               <property name="readOnly">
+                                <bool>true</bool>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </item>
+                           <item>
+                            <layout class="QHBoxLayout" name="horizontalLayout_11">
+                             <item>
+                              <widget class="QPushButton" name="setcolormanual">
+                               <property name="text">
+                                <string>build</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <spacer name="horizontalSpacer_6">
+                               <property name="orientation">
+                                <enum>Qt::Horizontal</enum>
+                               </property>
+                               <property name="sizeHint" stdset="0">
+                                <size>
+                                 <width>40</width>
+                                 <height>20</height>
+                                </size>
+                               </property>
+                              </spacer>
+                             </item>
+                             <item>
+                              <widget class="QLabel" name="label_8">
+                               <property name="text">
+                                <string>choose</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QComboBox" name="cpredefined">
+                               <property name="iconSize">
+                                <size>
+                                 <width>89</width>
+                                 <height>20</height>
+                                </size>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </item>
+                          </layout>
+                         </item>
+                         <item row="1" column="0">
+                          <widget class="QFrame" name="colorpaletetest">
+                           <property name="minimumSize">
+                            <size>
+                             <width>0</width>
+                             <height>22</height>
+                            </size>
+                           </property>
+                           <property name="frameShape">
+                            <enum>QFrame::StyledPanel</enum>
+                           </property>
+                           <property name="frameShadow">
+                            <enum>QFrame::Raised</enum>
+                           </property>
+                           <layout class="QGridLayout" name="gridLayout_18">
+                            <item row="0" column="0">
+                             <widget class="QLabel" name="lcolorpaletetest">
+                              <property name="text">
+                               <string>TextLabel</string>
+                              </property>
+                              <property name="scaledContents">
+                               <bool>true</bool>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                        </layout>
+                       </widget>
+                      </item>
+                      <item row="0" column="1">
+                       <widget class="QGroupBox" name="groupBox_5">
+                        <property name="toolTip">
+                         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;The default value for this is &lt;span style=&quot; font-weight:600;&quot;&gt;Tiled&lt;/span&gt;. That means the surface values are made by coloring a rectangle centered at the data node. To avoid situations when there is no data, and de default operation, would color a very wide rectangle, giving the idea of an uniform large period (&lt;span style=&quot; font-weight:600; font-style:italic;&quot;&gt;instead of missing data&lt;/span&gt;) no rectangle will be wider than 2 times the average period between two consecutive time measurements. The &lt;span style=&quot; font-weight:600; font-style:italic;&quot;&gt;smooth&lt;/span&gt; option is also a tiled one but the color are interpolated in a sub grid that puts ten additional nodes, in vertical and horizontal. The &lt;span style=&quot; font-weight:600;&quot;&gt;contour&lt;/span&gt; option, well it even smoother and gives drawings very nice to look at. It's surely the chosen option for a lot of publications, but well! We'll refrain to comment the inclusion of fine structure when in fact it has not been observed. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                        </property>
+                        <property name="title">
+                         <string>surface type</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                        </property>
+                        <layout class="QGridLayout" name="gridLayout_15">
+                         <item row="0" column="0">
+                          <layout class="QVBoxLayout" name="verticalLayout_22">
+                           <item>
+                            <layout class="QVBoxLayout" name="verticalLayout">
+                             <item>
+                              <widget class="QRadioButton" name="contour">
+                               <property name="text">
+                                <string>contour</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QRadioButton" name="tiled">
+                               <property name="text">
+                                <string>Tiled</string>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </item>
+                           <item>
+                            <widget class="QCheckBox" name="Bizarre">
+                             <property name="text">
+                              <string>Bizzare</string>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </item>
+                        </layout>
+                       </widget>
+                      </item>
+                      <item row="0" column="2">
+                       <widget class="QGroupBox" name="groupBox_11">
+                        <property name="title">
+                         <string>Legend inside size</string>
+                        </property>
+                        <layout class="QGridLayout" name="gridLayout_14">
+                         <item row="0" column="0">
+                          <widget class="QDoubleSpinBox" name="leginsidexsize">
+                           <property name="toolTip">
+                            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;As the inside legends are always in the right corner of the plot this value gives the fraction (0 up to 1.) of the horizontal space ocuppied by the color legend. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                           </property>
+                           <property name="maximum">
+                            <double>1.000000000000000</double>
+                           </property>
+                           <property name="singleStep">
+                            <double>0.100000000000000</double>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="1" column="0">
+                          <widget class="QDoubleSpinBox" name="leginsideysize">
+                           <property name="toolTip">
+                            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;As the inside legends are always in the right corner of the plot this value gives the fraction (0 up to 1.) of the vertical space ocuppied by the color legend. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                           </property>
+                           <property name="maximum">
+                            <double>1.000000000000000</double>
+                           </property>
+                           <property name="singleStep">
+                            <double>0.100000000000000</double>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <widget class="QGroupBox" name="groupBox_10">
+                      <property name="toolTip">
+                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;These values (left, right, down and up) are the borders sizes in fractions of the area reserved  for the color legend inside size.  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      </property>
+                      <property name="title">
+                       <string>legend Inside borders space in fraction of size      </string>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_6">
+                       <item row="0" column="0">
+                        <layout class="QHBoxLayout" name="horizontalLayout_12">
+                         <item>
+                          <widget class="QDoubleSpinBox" name="cinsidexi">
+                           <property name="maximum">
+                            <double>1.000000000000000</double>
+                           </property>
+                           <property name="singleStep">
+                            <double>0.100000000000000</double>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QDoubleSpinBox" name="cinsidexl">
+                           <property name="maximum">
+                            <double>1.000000000000000</double>
+                           </property>
+                           <property name="singleStep">
+                            <double>0.100000000000000</double>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QDoubleSpinBox" name="cinsideyi">
+                           <property name="maximum">
+                            <double>1.000000000000000</double>
+                           </property>
+                           <property name="singleStep">
+                            <double>0.100000000000000</double>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QDoubleSpinBox" name="cinsideyl">
+                           <property name="maximum">
+                            <double>1.000000000000000</double>
+                           </property>
+                           <property name="singleStep">
+                            <double>0.100000000000000</double>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_10">
+                      <item>
+                       <layout class="QHBoxLayout" name="horizontalLayout_9">
+                        <item>
+                         <widget class="QCheckBox" name="cminfreelimits">
+                          <property name="toolTip">
+                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;if checked the Min and Max values for the color scale will be set equal to the minimum and maximum value of the data matrix.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          </property>
+                          <property name="text">
+                           <string>Dynamic limits</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLabel" name="label_5">
+                          <property name="text">
+                           <string>Min</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLineEdit" name="cmin">
+                          <property name="toolTip">
+                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Mininum value for the color scale. &lt;/p&gt;&lt;p&gt;IT will remain the same if the Dynamic limits option is not ticked.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                      <item>
+                       <layout class="QHBoxLayout" name="horizontalLayout_8">
+                        <item>
+                         <widget class="QCheckBox" name="cmaxfreelimits">
+                          <property name="toolTip">
+                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;if checked the Min and Max values for the color scale will be set equal to the minimum and maximum value of the data matrix.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          </property>
+                          <property name="text">
+                           <string>Dynamic limits</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLabel" name="label_6">
+                          <property name="text">
+                           <string>Max</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLineEdit" name="cmax">
+                          <property name="toolTip">
+                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximum value for the color scale. &lt;/p&gt;&lt;p&gt;It will remain the same if the Dynamic limits option is not ticked.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_13">
+                      <item>
+                       <widget class="QGroupBox" name="groupBox_6">
+                        <property name="toolTip">
+                         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Decide if the color scale is linear or log10. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                        </property>
+                        <property name="title">
+                         <string>Surface scale</string>
+                        </property>
+                        <layout class="QFormLayout" name="formLayout_6">
+                         <item row="0" column="0">
+                          <widget class="QRadioButton" name="slog">
+                           <property name="text">
+                            <string>&amp;log</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="0" column="1">
+                          <widget class="QRadioButton" name="slinear">
+                           <property name="text">
+                            <string>linear</string>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QGroupBox" name="groupBox_7">
+                        <property name="toolTip">
+                         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Decide if the y scale is linear or log10. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                        </property>
+                        <property name="title">
+                         <string>ycale scale</string>
+                        </property>
+                        <layout class="QFormLayout" name="formLayout_7">
+                         <item row="0" column="0">
+                          <widget class="QRadioButton" name="sylog">
+                           <property name="text">
+                            <string>log</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="0" column="1">
+                          <widget class="QRadioButton" name="sylinear">
+                           <property name="text">
+                            <string>linear</string>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QGroupBox" name="groupBox_8">
+                        <property name="toolTip">
+                         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;Decide if you want to display a color legend.&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;If an inside color legend you can define its numerical values in this screen.&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;if a legend in the right of the plot you can set the space reserved for it at the advanced options in the global options tab. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                        </property>
+                        <property name="title">
+                         <string>Color legend</string>
+                        </property>
+                        <layout class="QGridLayout" name="gridLayout">
+                         <item row="0" column="0">
+                          <widget class="QRadioButton" name="cleg0">
+                           <property name="text">
+                            <string>&amp;no</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="0" column="1">
+                          <widget class="QRadioButton" name="cleg1">
+                           <property name="text">
+                            <string>&amp;right</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="0" column="2">
+                          <widget class="QRadioButton" name="cleg2">
+                           <property name="text">
+                            <string>inside</string>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QWidget" name="histo">
+                 <attribute name="icon">
+                  <iconset resource="../Ressources.qrc">
+                   <normaloff>:/Icons/Icons/chart15.svg</normaloff>:/Icons/Icons/chart15.svg</iconset>
+                 </attribute>
+                 <attribute name="title">
+                  <string>Histo proprieties</string>
+                 </attribute>
+                 <layout class="QGridLayout" name="gridLayout_19">
+                  <item row="0" column="0">
+                   <layout class="QVBoxLayout" name="verticalLayout_3">
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_41">
+                      <item>
+                       <layout class="QHBoxLayout" name="horizontalLayout_30">
+                        <item>
+                         <widget class="QLabel" name="label_25">
+                          <property name="text">
+                           <string>HistoType</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QComboBox" name="histotype">
+                          <property name="iconSize">
+                           <size>
+                            <width>90</width>
+                            <height>20</height>
+                           </size>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                      <item>
+                       <spacer name="horizontalSpacer_8">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>40</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                      <item>
+                       <layout class="QHBoxLayout" name="horizontalLayout_35">
+                        <item>
+                         <widget class="QLabel" name="label_31">
+                          <property name="text">
+                           <string>Scale for both histo</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLineEdit" name="sscale"/>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_29">
+                      <item>
+                       <widget class="QLabel" name="label_16">
+                        <property name="text">
+                         <string>yLabel</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLineEdit" name="hylabel"/>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_42">
+                      <item>
+                       <layout class="QHBoxLayout" name="horizontalLayout_31">
+                        <item>
+                         <widget class="QLabel" name="label_26">
+                          <property name="text">
+                           <string>x aditional Label for histo of type 1</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLineEdit" name="hxlabel"/>
+                        </item>
+                       </layout>
+                      </item>
+                      <item>
+                       <layout class="QVBoxLayout" name="verticalLayout_15">
+                        <item>
+                         <widget class="QLabel" name="label_24">
+                          <property name="text">
+                           <string>Color</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QPushButton" name="hcolor">
+                          <property name="text">
+                           <string>color</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_48">
+                      <item>
+                       <widget class="QLabel" name="label_35">
+                        <property name="text">
+                         <string>Histogram id</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLineEdit" name="hidlabel"/>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <spacer name="verticalSpacer_4">
+                      <property name="orientation">
+                       <enum>Qt::Vertical</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>20</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+               </widget>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_43">
+       <property name="spacing">
+        <number>1</number>
+       </property>
+       <item>
+        <widget class="QPushButton" name="derivedplot">
+         <property name="text">
+          <string>derived plot</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../Ressources.qrc">
+           <normaloff>:/Icons/Icons/line2.svg</normaloff>:/Icons/Icons/line2.svg</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_12">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="storelocal">
+         <property name="text">
+          <string>Save plot in local driver</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../Ressources.qrc">
+           <normaloff>:/Icons/Icons/open96.svg</normaloff>:/Icons/Icons/open96.svg</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="storeplot">
+         <property name="text">
+          <string>Save plot in database</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../Ressources.qrc">
+           <normaloff>:/Icons/Icons/database9.svg</normaloff>:/Icons/Icons/database9.svg</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="replot">
+         <property name="text">
+          <string>replot</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../Ressources.qrc">
+           <normaloff>:/Icons/Icons/refresh19.svg</normaloff>:/Icons/Icons/refresh19.svg</iconset>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../Ressources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>allleftaxisvaluesflag</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>allfetaxisvalues</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>367</x>
+     <y>573</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>638</x>
+     <y>573</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>allrightaxisvaluesflag</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>allrightaxisvalues</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>373</x>
+     <y>607</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>645</x>
+     <y>607</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

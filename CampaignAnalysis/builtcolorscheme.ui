@@ -1,0 +1,816 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>builtcolorscheme</class>
+ <widget class="QDialog" name="builtcolorscheme">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>579</width>
+    <height>196</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Built Color scheme</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../Ressources.qrc">
+    <normaloff>:/Icons/Icons/color4.svg</normaloff>:/Icons/Icons/color4.svg</iconset>
+  </property>
+  <property name="toolTip">
+   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;Here, one can define a color scheme by linear interpolation between color points. The color scheme will have a number colors equal to the color grid value, the higher this value the more continuous the color-scheme will appear.&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;The color points are considered to be at the same distance, latter one if there is a demand to change this behavior one can make this dialog a little more complex.&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;If the color grid number is equal to the color points, (a maximum of 20 in this dialog) one will have a discrete color palette with the colors of the colors points.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <widget class="QFrame" name="frame_2">
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QFormLayout" name="formLayout_2">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label">
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Color &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;points&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <item>
+              <widget class="QPushButton" name="c1">
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>30</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>:/BItmaps/Imagens/nocolorbox.png</normaloff>:/BItmaps/Imagens/nocolorbox.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="c2">
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>30</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>:/BItmaps/Imagens/nocolorbox.png</normaloff>:/BItmaps/Imagens/nocolorbox.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="c3">
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>30</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>:/BItmaps/Imagens/nocolorbox.png</normaloff>:/BItmaps/Imagens/nocolorbox.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="c4">
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>30</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>:/BItmaps/Imagens/nocolorbox.png</normaloff>:/BItmaps/Imagens/nocolorbox.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="c5">
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>30</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>:/BItmaps/Imagens/nocolorbox.png</normaloff>:/BItmaps/Imagens/nocolorbox.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="c6">
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>30</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>:/BItmaps/Imagens/nocolorbox.png</normaloff>:/BItmaps/Imagens/nocolorbox.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="c7">
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>30</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>:/BItmaps/Imagens/nocolorbox.png</normaloff>:/BItmaps/Imagens/nocolorbox.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="c8">
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>30</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>:/BItmaps/Imagens/nocolorbox.png</normaloff>:/BItmaps/Imagens/nocolorbox.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="c9">
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>30</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>:/BItmaps/Imagens/nocolorbox.png</normaloff>:/BItmaps/Imagens/nocolorbox.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="c10">
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>30</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>:/BItmaps/Imagens/nocolorbox.png</normaloff>:/BItmaps/Imagens/nocolorbox.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <item>
+              <widget class="QPushButton" name="c11">
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>30</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>:/BItmaps/Imagens/nocolorbox.png</normaloff>:/BItmaps/Imagens/nocolorbox.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="c12">
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>30</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>:/BItmaps/Imagens/nocolorbox.png</normaloff>:/BItmaps/Imagens/nocolorbox.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="c13">
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>30</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>:/BItmaps/Imagens/nocolorbox.png</normaloff>:/BItmaps/Imagens/nocolorbox.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="c14">
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>30</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>:/BItmaps/Imagens/nocolorbox.png</normaloff>:/BItmaps/Imagens/nocolorbox.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="c15">
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>30</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>:/BItmaps/Imagens/nocolorbox.png</normaloff>:/BItmaps/Imagens/nocolorbox.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="c16">
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>30</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>:/BItmaps/Imagens/nocolorbox.png</normaloff>:/BItmaps/Imagens/nocolorbox.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="c17">
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>30</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>:/BItmaps/Imagens/nocolorbox.png</normaloff>:/BItmaps/Imagens/nocolorbox.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="c18">
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>30</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>:/BItmaps/Imagens/nocolorbox.png</normaloff>:/BItmaps/Imagens/nocolorbox.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="c19">
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>30</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>:/BItmaps/Imagens/nocolorbox.png</normaloff>:/BItmaps/Imagens/nocolorbox.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="c20">
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>30</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>:/BItmaps/Imagens/nocolorbox.png</normaloff>:/BItmaps/Imagens/nocolorbox.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>color grid</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="ncol">
+           <property name="minimum">
+            <number>2</number>
+           </property>
+           <property name="maximum">
+            <number>300</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="test">
+         <property name="maximumSize">
+          <size>
+           <width>50</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Test</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QFormLayout" name="formLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="Result">
+            <property name="text">
+             <string>Result</string>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QDialogButtonBox" name="buttonBox">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="standardButtons">
+        <set>QDialogButtonBox::Cancel|QDialogButtonBox::Help|QDialogButtonBox::Ok</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../Ressources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>builtcolorscheme</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>builtcolorscheme</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,924 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>plotcanvas</class>
+ <widget class="QMainWindow" name="plotcanvas">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>971</width>
+    <height>698</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../Ressources.qrc">
+    <normaloff>:/Icons/Icons/educational15.svg</normaloff>:/Icons/Icons/educational15.svg</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QGraphicsView" name="graphicsView"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>971</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionFit_into_widget"/>
+   <addaction name="actionScale"/>
+   <addaction name="actionConfigure_Plot"/>
+   <addaction name="actionMake_a_Table"/>
+   <addaction name="actionSavedata"/>
+   <addaction name="actionExport_plot"/>
+   <addaction name="actionLinked_with_time_changes"/>
+   <addaction name="actionSync_this_plot_with_the_period"/>
+   <addaction name="actionSet_overall_time_equal_to_this_window_time"/>
+   <addaction name="actionSmall_time_adjustments"/>
+   <addaction name="actionMovie"/>
+   <addaction name="actionDefine_store_events"/>
+   <addaction name="actionAuxiliary_lines"/>
+   <addaction name="separator"/>
+   <addaction name="actionContinuously_updated"/>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget">
+   <property name="allowedAreas">
+    <set>Qt::BottomDockWidgetArea</set>
+   </property>
+   <property name="windowTitle">
+    <string>Managing plot time</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>8</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QWidget" name="onlyinAnalysis" native="true">
+         <layout class="QHBoxLayout" name="onlyinAnalysislayout" stretch="0,4,0">
+          <item>
+           <widget class="QSpinBox" name="minustime">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Subtracting minutes to the initial time&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="minimum">
+             <number>-120</number>
+            </property>
+            <property name="maximum">
+             <number>120</number>
+            </property>
+            <property name="singleStep">
+             <number>10</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QScrollBar" name="horizontalScrollBar">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="plustime">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Adding minutes to the final time&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="minimum">
+             <number>-120</number>
+            </property>
+            <property name="maximum">
+             <number>120</number>
+            </property>
+            <property name="singleStep">
+             <number>10</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="onlyinMonitoring" native="true">
+         <layout class="QHBoxLayout" name="onlyinMonitoringlayout">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="timeinterval1">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="../Ressources.qrc">
+              <normaloff>:/Icons/Icons/5min.png</normaloff>:/Icons/Icons/5min.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>30</width>
+              <height>10</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="timeinterval2">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="../Ressources.qrc">
+              <normaloff>:/Icons/Icons/10min.png</normaloff>:/Icons/Icons/10min.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>38</width>
+              <height>10</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="timeinterval3">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="../Ressources.qrc">
+              <normaloff>:/Icons/Icons/20min.png</normaloff>:/Icons/Icons/20min.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>38</width>
+              <height>10</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="timeinterval4">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="../Ressources.qrc">
+              <normaloff>:/Icons/Icons/30min.png</normaloff>:/Icons/Icons/30min.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>38</width>
+              <height>10</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="timeinterval5">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="../Ressources.qrc">
+              <normaloff>:/Icons/Icons/45min.png</normaloff>:/Icons/Icons/45min.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>38</width>
+              <height>10</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="timeinterval6">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="../Ressources.qrc">
+              <normaloff>:/Icons/Icons/60min.png</normaloff>:/Icons/Icons/60min.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>14</width>
+              <height>10</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="timeinterval7">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="../Ressources.qrc">
+              <normaloff>:/Icons/Icons/90min.png</normaloff>:/Icons/Icons/90min.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>54</width>
+              <height>10</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="timeinterval8">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="../Ressources.qrc">
+              <normaloff>:/Icons/Icons/120min.png</normaloff>:/Icons/Icons/120min.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>14</width>
+              <height>10</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="timeinterval9">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="../Ressources.qrc">
+              <normaloff>:/Icons/Icons/180min.png</normaloff>:/Icons/Icons/180min.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>14</width>
+              <height>10</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="timeinterval10">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="../Ressources.qrc">
+              <normaloff>:/Icons/Icons/360min.png</normaloff>:/Icons/Icons/360min.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>14</width>
+              <height>10</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="timeinterval11">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="../Ressources.qrc">
+              <normaloff>:/Icons/Icons/720min.png</normaloff>:/Icons/Icons/720min.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>22</width>
+              <height>10</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="timeinterval12">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="../Ressources.qrc">
+              <normaloff>:/Icons/Icons/1440min.png</normaloff>:/Icons/Icons/1440min.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>22</width>
+              <height>10</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="hourstimeinterval">
+            <property name="maximum">
+             <number>72</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>Hours  </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="minutestimeinterval">
+            <property name="maximum">
+             <number>59</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_5">
+            <property name="text">
+             <string>min   </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="refreshrate">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Refresh rate(in seconds) only used when &lt;img src=&quot;:/Icons/Icons/refresh.svg&quot;/&gt; (in taskbar) is checked.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="minimum">
+             <number>30</number>
+            </property>
+            <property name="maximum">
+             <number>600</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>Refresh rate (s)</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_7">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <spacer name="horizontalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QDateTimeEdit" name="initialtime">
+           <property name="inputMethodHints">
+            <set>Qt::ImhPreferNumbers</set>
+           </property>
+           <property name="correctionMode">
+            <enum>QAbstractSpinBox::CorrectToPreviousValue</enum>
+           </property>
+           <property name="showGroupSeparator" stdset="0">
+            <bool>false</bool>
+           </property>
+           <property name="displayFormat">
+            <string>yyyy/MM/dd hh:mm:ss</string>
+           </property>
+           <property name="calendarPopup">
+            <bool>false</bool>
+           </property>
+           <property name="timeSpec">
+            <enum>Qt::UTC</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_4">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="timefromruns">
+           <property name="text">
+            <string>from Runs</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../Ressources.qrc">
+             <normaloff>:/Icons/Icons/time5.svg</normaloff>:/Icons/Icons/time5.svg</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_5">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="Byevents">
+           <property name="text">
+            <string>By events</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../Ressources.qrc">
+             <normaloff>:/Icons/Icons/education31.svg</normaloff>:/Icons/Icons/education31.svg</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_6">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QDateTimeEdit" name="finaltime">
+           <property name="correctionMode">
+            <enum>QAbstractSpinBox::CorrectToPreviousValue</enum>
+           </property>
+           <property name="displayFormat">
+            <string>yyyy/MM/dd hh:mm:ss</string>
+           </property>
+           <property name="calendarPopup">
+            <bool>false</bool>
+           </property>
+           <property name="timeSpec">
+            <enum>Qt::UTC</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="replot">
+           <property name="text">
+            <string>Replot</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../Ressources.qrc">
+             <normaloff>:/Icons/Icons/refresh19.svg</normaloff>:/Icons/Icons/refresh19.svg</iconset>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="actionFit_into_widget">
+   <property name="icon">
+    <iconset resource="../Ressources.qrc">
+     <normaloff>:/Icons/Icons/fit2.svg</normaloff>:/Icons/Icons/fit2.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Fit into widget</string>
+   </property>
+   <property name="toolTip">
+    <string>Plot will be scalled to fit the widget</string>
+   </property>
+  </action>
+  <action name="actionConfigure_Plot">
+   <property name="icon">
+    <iconset resource="../Ressources.qrc">
+     <normaloff>:/Icons/Icons/repair6.svg</normaloff>:/Icons/Icons/repair6.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Configure Plot</string>
+   </property>
+   <property name="toolTip">
+    <string>change plot options</string>
+   </property>
+  </action>
+  <action name="actionDefine_store_events">
+   <property name="icon">
+    <iconset resource="../Ressources.qrc">
+     <normaloff>:/Icons/Icons/education31.svg</normaloff>:/Icons/Icons/education31.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Define/store events</string>
+   </property>
+   <property name="toolTip">
+    <string>Define store events</string>
+   </property>
+  </action>
+  <action name="actionLinked_with_time_changes">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Ressources.qrc">
+     <normaloff>:/Icons/Icons/unsync.svg</normaloff>
+     <normalon>:/Icons/Icons/sync.svg</normalon>:/Icons/Icons/unsync.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Linked with time changes</string>
+   </property>
+   <property name="toolTip">
+    <string>If checked whenever there is a different period interval selected the plot will be redone with the new time period.</string>
+   </property>
+  </action>
+  <action name="actionSync_this_plot_with_the_period">
+   <property name="icon">
+    <iconset resource="../Ressources.qrc">
+     <normaloff>:/Icons/Icons/movie.svg</normaloff>:/Icons/Icons/movie.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Sync this plot with the period</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;Redardeless of the link-with-time-button flag(&lt;img src=&quot;:/Icons/Icons/sync.svg&quot; width=&quot;22&quot; height=&quot;22&quot;/&gt;, or &lt;img src=&quot;:/Icons/Icons/unsync.svg&quot; width=&quot;22&quot; height=&quot;22&quot;/&gt;) pressing this button will refresh the plot to the last selected period for the given database. Obviously, normaly if the status is &lt;img src=&quot;:/Icons/Icons/sync.svg&quot; width=&quot;22&quot; height=&quot;22&quot;/&gt; noting will happen, unless the flag of syncronizing with time was set after the last selection of a new time period.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </action>
+  <action name="actionSet_overall_time_equal_to_this_window_time">
+   <property name="icon">
+    <iconset resource="../Ressources.qrc">
+     <normaloff>:/Icons/Icons/setguitime.svg</normaloff>:/Icons/Icons/setguitime.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Set overall time equal to this window time</string>
+   </property>
+   <property name="toolTip">
+    <string>Sets the time equal to this window time</string>
+   </property>
+  </action>
+  <action name="actionAuxiliary_lines">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Ressources.qrc">
+     <normaloff>:/Icons/Icons/plus55.svg</normaloff>:/Icons/Icons/plus55.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Auxiliary lines</string>
+   </property>
+   <property name="toolTip">
+    <string>If checked display to movable lines above the plot.
+In this case you cannot use the mouse to select a area to zoom.
+As the left mouse button is used to pick the lines and move them arround.</string>
+   </property>
+  </action>
+  <action name="actionSavedata">
+   <property name="icon">
+    <iconset resource="../Ressources.qrc">
+     <normaloff>:/Icons/Icons/data25.svg</normaloff>:/Icons/Icons/data25.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Savedata</string>
+   </property>
+   <property name="toolTip">
+    <string>Saving the plot data in the hard drive </string>
+   </property>
+  </action>
+  <action name="actionMake_a_Table">
+   <property name="icon">
+    <iconset resource="../Ressources.qrc">
+     <normaloff>:/Icons/Icons/spreadsheet6.svg</normaloff>:/Icons/Icons/spreadsheet6.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Make a Table</string>
+   </property>
+   <property name="toolTip">
+    <string>Display  a table with data from selected plot items.</string>
+   </property>
+  </action>
+  <action name="actionExport_plot">
+   <property name="icon">
+    <iconset resource="../Ressources.qrc">
+     <normaloff>:/Icons/Icons/floppy16B.svg</normaloff>:/Icons/Icons/floppy16B.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Export plot </string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Exporting plot into the  hard drive &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </action>
+  <action name="actionScale">
+   <property name="icon">
+    <iconset resource="../Ressources.qrc">
+     <normaloff>:/Icons/Icons/Freescale.svg</normaloff>:/Icons/Icons/Freescale.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Scale</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Scale de plot by an abritary value. When used the automatic redraw  &lt;img src=&quot;:/Icons/Icons/linkresize.svg&quot;/&gt; of the windows will be disabled.&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;This is useful if one wants save a high resolution Raster image.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </action>
+  <action name="actionSmall_time_adjustments">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Ressources.qrc">
+     <normaloff>:/Icons/Icons/tsmalladjustments.svg</normaloff>:/Icons/Icons/tsmalladjustments.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Small time adjustments</string>
+   </property>
+   <property name="toolTip">
+    <string>you can adjust this widget time</string>
+   </property>
+  </action>
+  <action name="actionMovie">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Ressources.qrc">
+     <normaloff>:/Icons/Icons/film27.svg</normaloff>:/Icons/Icons/film27.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Movie</string>
+   </property>
+   <property name="toolTip">
+    <string>Dinamic evolution inside chamber</string>
+   </property>
+  </action>
+  <action name="actionContinuously_updated">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Ressources.qrc">
+     <normaloff>:/Icons/Icons/refresh19.svg</normaloff>
+     <activeon>:/Icons/Icons/Nrefresh19.svg</activeon>:/Icons/Icons/refresh19.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Continuously updated</string>
+   </property>
+   <property name="toolTip">
+    <string>continuously updated</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../Ressources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>dockWidget</sender>
+   <signal>visibilityChanged(bool)</signal>
+   <receiver>actionSmall_time_adjustments</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>399</x>
+     <y>519</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSmall_time_adjustments</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>dockWidget</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>519</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>channelWindow</class>
+ <widget class="QDialog" name="channelWindow">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>761</width>
+    <height>507</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Selecting itens to plot/download</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../Ressources.qrc">
+    <normaloff>:/Icons/Icons/getchannels.svg</normaloff>:/Icons/Icons/getchannels.svg</iconset>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>false</bool>
+  </property>
+  <property name="modal">
+   <bool>false</bool>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="sizeConstraint">
+    <enum>QLayout::SetNoConstraint</enum>
+   </property>
+   <item row="0" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_8">
+       <item>
+        <spacer name="horizontalSpacer_7">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="databasename">
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="savetofile">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="text">
+          <string>Save to file</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../Ressources.qrc">
+           <normaloff>:/Icons/Icons/floppy16.svg</normaloff>:/Icons/Icons/floppy16.svg</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="builtatable">
+         <property name="text">
+          <string>Built a table</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../Ressources.qrc">
+           <normaloff>:/Icons/Icons/spreadsheet6.svg</normaloff>:/Icons/Icons/spreadsheet6.svg</iconset>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="makeanhistogram">
+         <property name="text">
+          <string>Make an Histogram</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../Ressources.qrc">
+           <normaloff>:/Icons/Icons/chart15.svg</normaloff>:/Icons/Icons/chart15.svg</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="makeasurfaceplot">
+         <property name="text">
+          <string>Make a surface plot</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../Ressources.qrc">
+           <normaloff>:/Icons/Icons/banana4.svg</normaloff>:/Icons/Icons/banana4.svg</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="makeatyplot">
+         <property name="text">
+          <string>Make a t-y plot</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../Ressources.qrc">
+           <normaloff>:/Icons/Icons/educational15.svg</normaloff>:/Icons/Icons/educational15.svg</iconset>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_12">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_11">
+           <item>
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>Stored channels</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="Untick">
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;all the sellected itens will be desellected.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="text">
+              <string>Untick</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../Ressources.qrc">
+               <normaloff>:/Icons/Icons/erasechecked.svg</normaloff>:/Icons/Icons/erasechecked.svg</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>16</width>
+               <height>16</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_8">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QSplitter" name="splitter">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <widget class="QTreeView" name="treeView">
+            <property name="sortingEnabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+           <widget class="QWidget" name="layoutWidget">
+            <layout class="QHBoxLayout" name="horizontalLayout">
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout">
+               <item>
+                <widget class="QPushButton" name="all">
+                 <property name="toolTip">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;will select all the ticked left fields&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../Ressources.qrc">
+                   <normaloff>:/Icons/Icons/doubleforward.svg</normaloff>:/Icons/Icons/doubleforward.svg</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="takeback">
+                 <property name="toolTip">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Will clear all the right items,&lt;/p&gt;&lt;p&gt;regardeless of theirs check status.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../Ressources.qrc">
+                   <normaloff>:/Icons/Icons/left75.svg</normaloff>:/Icons/Icons/left75.svg</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="verticalSpacer">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <widget class="QListView" name="listView">
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Only the ticked itens in this panel will be saved to file, displayed in a table or plotted.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;For downloading into a file or displaying  in a table one can mix strings with numerical itens.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;For plotting only the numerical itens will be considered and a multiaxis plot will be displayed. Pointless to choose more that 5 or six itens to display in the same plot. The several axis will take over the all the canvas space.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p/&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="dragEnabled">
+                <bool>true</bool>
+               </property>
+               <property name="dragDropMode">
+                <enum>QAbstractItemView::DragDrop</enum>
+               </property>
+               <property name="defaultDropAction">
+                <enum>Qt::MoveAction</enum>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <item>
+            <widget class="QPushButton" name="cancel">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>close</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../Ressources.qrc">
+               <normaloff>:/Icons/Icons/cancel4.svg</normaloff>:/Icons/Icons/cancel4.svg</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>16</width>
+               <height>16</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="help">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>help</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../Ressources.qrc">
+               <normaloff>:/Icons/Icons/information11.svg</normaloff>:/Icons/Icons/information11.svg</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>16</width>
+               <height>16</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_9"/>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QPushButton" name="timebutton">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>Changetime</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../Ressources.qrc">
+           <normaloff>:/Icons/Icons/alarm27.svg</normaloff>:/Icons/Icons/alarm27.svg</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="timelabel">
+         <property name="text">
+          <string>---------------------------------------------------------------NO TIME HAS YET BEEN SET ------------------</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../Ressources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

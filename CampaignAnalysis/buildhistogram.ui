@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>BuildHistogram</class>
+ <widget class="QDialog" name="BuildHistogram">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>934</width>
+    <height>235</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../Ressources.qrc">
+    <normaloff>:/Icons/Icons/chart15.svg</normaloff>:/Icons/Icons/chart15.svg</iconset>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;There is two options for the histograms. Either one fills the line &amp;quot;Bin Labels&amp;quot; with a string cooma separated eventually with a semi column. eg:&lt;/p&gt;&lt;p&gt;H1,H2,H3,H4,H5,H6,H7,H8,H9;V1,V2,V3,V4,V5,V6,V7,V8,V9. That will mean two histograms (as in the hodoscope countings) and you should have choosen by the correct order the fields corresponding to H1,H2, etc V9.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;Or, as it happens when one wants to plot an histogram for the countings of the particles for various diameters, one can choose a linear or log scale, the initial value (the number of bins wiil be the number of fields you have previous choosen). In this cases one can have a lot of bins making it impossible to put legends for all of them. So a sampling of the labels lengend is advisable. 10 usually works fine.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="title">
+        <string>Type and bin labels</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_6">
+            <item>
+             <widget class="QLabel" name="label_6">
+              <property name="text">
+               <string>Bin Labels</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="binlabels"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_9">
+            <item>
+             <widget class="QRadioButton" name="linear">
+              <property name="text">
+               <string>&amp;Linear</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="log">
+              <property name="text">
+               <string>log</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_7">
+              <item>
+               <widget class="QLabel" name="label_7">
+                <property name="text">
+                 <string>Initial value</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="initialvalue"/>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_8">
+              <item>
+               <widget class="QLabel" name="label_5">
+                <property name="text">
+                 <string>Final value</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="Finalvalue"/>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_8">
+                <property name="text">
+                 <string>Number of bins</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="numberofbins">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_9">
+                <property name="text">
+                 <string>Sampling</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="Sampling">
+                <property name="value">
+                 <number>10</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <item>
+             <widget class="QCheckBox" name="checkManual">
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If this is checked the bins to plot is not going to be fetched from the selectedwindows window (only one is necessary to have the table mane) but are going to be maual inputed as a comma separated values.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="text">
+               <string>Manual columns</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="Bins">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="setnob">
+              <property name="text">
+               <string>set nob</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_10">
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="cancelButton">
+         <property name="text">
+          <string>cancel</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../Ressources.qrc">
+           <normaloff>:/Icons/Icons/cancel4.svg</normaloff>:/Icons/Icons/cancel4.svg</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="okbutton">
+         <property name="text">
+          <string>accept</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../Ressources.qrc">
+           <normaloff>:/Icons/Icons/check46.svg</normaloff>:/Icons/Icons/check46.svg</iconset>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../Ressources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>cancelButton</sender>
+   <signal>pressed()</signal>
+   <receiver>BuildHistogram</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>577</x>
+     <y>405</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>358</x>
+     <y>237</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

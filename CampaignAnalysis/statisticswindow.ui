@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>StatisticsWindow</class>
+ <widget class="QDialog" name="StatisticsWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>696</width>
+    <height>457</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../Ressources.qrc">
+    <normaloff>:/Icons/Icons/spreadsheet1.svg</normaloff>:/Icons/Icons/spreadsheet1.svg</iconset>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QTextBrowser" name="textBrowser"/>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../Ressources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

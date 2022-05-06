@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>searchtext</class>
+ <widget class="QDialog" name="searchtext">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>126</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Text to search</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="string"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QDialogButtonBox" name="buttonBox">
+       <property name="standardButtons">
+        <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>searchtext</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>199</x>
+     <y>100</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>62</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

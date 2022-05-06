@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Plot2Table</class>
+ <widget class="QDialog" name="Plot2Table">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>365</width>
+    <height>355</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Plot to table dialog</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../Ressources.qrc">
+    <normaloff>:/Icons/Icons/spreadsheet7.svg</normaloff>:/Icons/Icons/spreadsheet7.svg</iconset>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QTreeView" name="treeView">
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;tick/untick the fields to save&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QPushButton" name="cancelbutton">
+         <property name="text">
+          <string>cancel</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../Ressources.qrc">
+           <normaloff>:/Icons/Icons/cancel4.svg</normaloff>:/Icons/Icons/cancel4.svg</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="okbutton">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="text">
+          <string>ok</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../Ressources.qrc">
+           <normaloff>:/Icons/Icons/check46.svg</normaloff>:/Icons/Icons/check46.svg</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../Ressources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

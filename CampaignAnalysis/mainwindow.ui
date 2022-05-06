@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1205</width>
+    <height>784</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>NO ACTIVE DATABASE</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../Ressources.qrc">
+    <normaloff>:/Icons/Icons/aeroplot.svg</normaloff>:/Icons/Icons/aeroplot.svg</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="0">
+     <widget class="QMdiArea" name="mdiArea">
+      <property name="background">
+       <brush brushstyle="DiagCrossPattern">
+        <color alpha="255">
+         <red>119</red>
+         <green>120</green>
+         <blue>120</blue>
+        </color>
+       </brush>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1205</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuWindows">
+    <property name="title">
+     <string>Wi&amp;ndows</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuTool_Bars">
+    <property name="title">
+     <string>&amp;Tool Bars</string>
+    </property>
+    <addaction name="actionMain_toolBar"/>
+    <addaction name="actionLog_Messages_Area"/>
+    <addaction name="actionExplorer_dock_widget"/>
+   </widget>
+   <widget class="QMenu" name="menuAbouts">
+    <property name="title">
+     <string>Abo&amp;uts</string>
+    </property>
+    <addaction name="actionAbout_AeroDax"/>
+    <addaction name="actionAbout_Qt"/>
+   </widget>
+   <widget class="QMenu" name="menuconfigure">
+    <property name="title">
+     <string>configure</string>
+    </property>
+    <addaction name="actionFactores_for_HighDPI"/>
+   </widget>
+   <addaction name="menuWindows"/>
+   <addaction name="menuTool_Bars"/>
+   <addaction name="menuconfigure"/>
+   <addaction name="menuAbouts"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="windowTitle">
+    <string>Main ToolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpenDatabase"/>
+   <addaction name="actionChoose_time_interval"/>
+   <addaction name="separator"/>
+   <addaction name="actionDownload_data"/>
+   <addaction name="actionDefining_Screens"/>
+   <addaction name="separator"/>
+   <addaction name="actionLoad_Table"/>
+   <addaction name="actionImport_Table_for_banana"/>
+   <addaction name="actionElog"/>
+   <addaction name="actionShow_data_table_commentaries"/>
+   <addaction name="actionEdilt_local_plots"/>
+   <addaction name="actionInstrument_Status"/>
+   <addaction name="separator"/>
+   <addaction name="actionShiftReport"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QDockWidget" name="DockMessages">
+   <property name="allowedAreas">
+    <set>Qt::BottomDockWidgetArea|Qt::LeftDockWidgetArea|Qt::RightDockWidgetArea</set>
+   </property>
+   <property name="windowTitle">
+    <string>&amp;log/warning/error messages </string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>8</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QGridLayout" name="gridLayout_6">
+     <item row="0" column="0">
+      <widget class="QTextBrowser" name="Messages"/>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget">
+   <property name="windowIcon">
+    <iconset resource="../Ressources.qrc">
+     <normaloff>:/Icons/Icons/aeroplot.svg</normaloff>:/Icons/Icons/aeroplot.svg</iconset>
+   </property>
+   <property name="windowTitle">
+    <string>E&amp;xplorer project/database</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_2">
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="0">
+      <widget class="QTabWidget" name="LateraltabWidget">
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Database config&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;(shown only in su mode)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="tabplots">
+        <attribute name="icon">
+         <iconset resource="../Ressources.qrc">
+          <normaloff>:/Icons/Icons/treeplots.svg</normaloff>:/Icons/Icons/treeplots.svg</iconset>
+        </attribute>
+        <attribute name="title">
+         <string>Stored Plots</string>
+        </attribute>
+        <layout class="QGridLayout" name="gridLayout_5">
+         <item row="0" column="0">
+          <widget class="QTreeView" name="PlotsView"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="plotsbyinstruments">
+        <attribute name="icon">
+         <iconset resource="../Ressources.qrc">
+          <normaloff>:/Icons/Icons/spreadsheet2.svg</normaloff>:/Icons/Icons/spreadsheet2.svg</iconset>
+        </attribute>
+        <attribute name="title">
+         <string>Plots by Inst</string>
+        </attribute>
+        <layout class="QGridLayout" name="gridLayout_7">
+         <item row="0" column="0">
+          <widget class="QTreeView" name="byinstrument"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="Explorer">
+        <attribute name="icon">
+         <iconset resource="../Ressources.qrc">
+          <normaloff>:/Icons/Icons/tree38.svg</normaloff>:/Icons/Icons/tree38.svg</iconset>
+        </attribute>
+        <attribute name="title">
+         <string>Explorer</string>
+        </attribute>
+        <layout class="QGridLayout" name="gridLayout_4">
+         <item row="0" column="0">
+          <widget class="QTreeView" name="explorerView"/>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="actionOpenDatabase">
+   <property name="icon">
+    <iconset resource="../Ressources.qrc">
+     <normaloff>:/Icons/Icons/three128.svg</normaloff>:/Icons/Icons/three128.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Opens a database</string>
+   </property>
+   <property name="toolTip">
+    <string>Opens a database</string>
+   </property>
+  </action>
+  <action name="actionMain_toolBar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Ressources.qrc">
+     <normaloff>:/Icons/Icons/gearwheels.svg</normaloff>:/Icons/Icons/gearwheels.svg</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Main_toolBar</string>
+   </property>
+   <property name="toolTip">
+    <string>Main toolbar</string>
+   </property>
+  </action>
+  <action name="actionLog_Messages_Area">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Ressources.qrc">
+     <normaloff>:/Icons/Icons/console3.svg</normaloff>:/Icons/Icons/console3.svg</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Log Messages Area</string>
+   </property>
+   <property name="toolTip">
+    <string>Log Messages Area</string>
+   </property>
+  </action>
+  <action name="actionChoose_time_interval">
+   <property name="icon">
+    <iconset resource="../Ressources.qrc">
+     <normaloff>:/Icons/Icons/wristwatch8.svg</normaloff>:/Icons/Icons/wristwatch8.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Choose time interval</string>
+   </property>
+   <property name="toolTip">
+    <string>Choose the time for ploting/dowloading/uodate etc</string>
+   </property>
+  </action>
+  <action name="actionLoad_Table">
+   <property name="icon">
+    <iconset resource="../Ressources.qrc">
+     <normaloff>:/Icons/Icons/spreadsheet7.svg</normaloff>:/Icons/Icons/spreadsheet7.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Load Table </string>
+   </property>
+   <property name="toolTip">
+    <string>load a table from Hard drive</string>
+   </property>
+  </action>
+  <action name="actionExplorer_dock_widget">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Ressources.qrc">
+     <normaloff>:/Icons/Icons/tree38.svg</normaloff>:/Icons/Icons/tree38.svg</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;explorer dock widget</string>
+   </property>
+  </action>
+  <action name="actionDownload_data">
+   <property name="icon">
+    <iconset resource="../Ressources.qrc">
+     <normaloff>:/Icons/Icons/getchannels.svg</normaloff>:/Icons/Icons/getchannels.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Download data </string>
+   </property>
+   <property name="toolTip">
+    <string>download/plotting data from database</string>
+   </property>
+  </action>
+  <action name="actionImport_Table_for_banana">
+   <property name="icon">
+    <iconset resource="../Ressources.qrc">
+     <normaloff>:/Icons/Icons/importtableforbanana.svg</normaloff>:/Icons/Icons/importtableforbanana.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Import Table for banana</string>
+   </property>
+   <property name="toolTip">
+    <string>Import a formated file fit to plot a banana</string>
+   </property>
+  </action>
+  <action name="actionDefining_Screens">
+   <property name="icon">
+    <iconset resource="../Ressources.qrc">
+     <normaloff>:/Icons/Icons/screens.svg</normaloff>:/Icons/Icons/screens.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Defining Screens</string>
+   </property>
+  </action>
+  <action name="actionElog">
+   <property name="icon">
+    <iconset resource="../Ressources.qrc">
+     <normaloff>:/Icons/Icons/log1.svg</normaloff>:/Icons/Icons/log1.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Elog</string>
+   </property>
+   <property name="toolTip">
+    <string>Read Log entries</string>
+   </property>
+  </action>
+  <action name="actionEdilt_local_plots">
+   <property name="icon">
+    <iconset resource="../Ressources.qrc">
+     <normaloff>:/Icons/Icons/confplot.svg</normaloff>:/Icons/Icons/confplot.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Edilt local plots</string>
+   </property>
+   <property name="toolTip">
+    <string>Edit local stored plots</string>
+   </property>
+  </action>
+  <action name="actionAbout_Qt">
+   <property name="text">
+    <string>About &amp;Qt</string>
+   </property>
+  </action>
+  <action name="actionAbout_AeroDax">
+   <property name="icon">
+    <iconset resource="../Ressources.qrc">
+     <normaloff>:/Icons/Icons/aeroplot.svg</normaloff>:/Icons/Icons/aeroplot.svg</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;About AeroDax</string>
+   </property>
+  </action>
+  <action name="actionInstrument_Status">
+   <property name="icon">
+    <iconset resource="../Ressources.qrc">
+     <normaloff>:/Icons/Icons/task.svg</normaloff>:/Icons/Icons/task.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Instrument Status</string>
+   </property>
+   <property name="toolTip">
+    <string>List the status of the data upload int database</string>
+   </property>
+  </action>
+  <action name="actionFactores_for_HighDPI">
+   <property name="icon">
+    <iconset resource="../Ressources.qrc">
+     <normaloff>:/Icons/Icons/Gruunge-Halftone1--Arvin61r58.svg</normaloff>:/Icons/Icons/Gruunge-Halftone1--Arvin61r58.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Factores for HighDPI</string>
+   </property>
+   <property name="toolTip">
+    <string>Setting factors to minor High DPI problems</string>
+   </property>
+  </action>
+  <action name="actionShow_data_table_commentaries">
+   <property name="icon">
+    <iconset resource="../Ressources.qrc">
+     <normaloff>:/Icons/Icons/infotable.svg</normaloff>:/Icons/Icons/infotable.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Show data/intruments  description/commentaries</string>
+   </property>
+   <property name="toolTip">
+    <string>Show data table (instrument and processed data) commentaries</string>
+   </property>
+  </action>
+  <action name="actionShiftReport">
+   <property name="icon">
+    <iconset resource="../Ressources.qrc">
+     <normaloff>:/Icons/Icons/report.svg</normaloff>:/Icons/Icons/report.svg</iconset>
+   </property>
+   <property name="text">
+    <string>ShiftReport</string>
+   </property>
+   <property name="toolTip">
+    <string>this will open an editor to write small shifts reports</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="../Ressources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionMain_toolBar</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>mainToolBar</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>602</x>
+     <y>49</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionLog_Messages_Area</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>DockMessages</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>602</x>
+     <y>734</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionExplorer_dock_widget</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>dockWidget</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>143</x>
+     <y>294</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

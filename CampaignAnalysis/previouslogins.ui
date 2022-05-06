@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PreviousLogins</class>
+ <widget class="QDialog" name="PreviousLogins">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>531</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QListView" name="listView"/>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>32</width>
+           <height>48</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="cancelbutton">
+         <property name="text">
+          <string>Discard</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../Ressources.qrc">
+           <normaloff>:/Icons/Icons/cancel4.svg</normaloff>:/Icons/Icons/cancel4.svg</iconset>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../Ressources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>cancelbutton</sender>
+   <signal>clicked()</signal>
+   <receiver>PreviousLogins</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>348</x>
+     <y>495</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>265</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

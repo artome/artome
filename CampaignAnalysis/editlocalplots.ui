@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Editlocalplots</class>
+ <widget class="QDialog" name="Editlocalplots">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>845</width>
+    <height>445</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QPushButton" name="loadtyplot">
+         <property name="text">
+          <string>Load ty plots File</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../Ressources.qrc">
+           <normaloff>:/Icons/Icons/educational15.svg</normaloff>:/Icons/Icons/educational15.svg</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="LoadSplot">
+         <property name="text">
+          <string>Load surface plots File</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../Ressources.qrc">
+           <normaloff>:/Icons/Icons/banana4.svg</normaloff>:/Icons/Icons/banana4.svg</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="LoadHplots">
+         <property name="text">
+          <string>Load Histo plots File</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../Ressources.qrc">
+           <normaloff>:/Icons/Icons/histotype2.png</normaloff>:/Icons/Icons/histotype2.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="loadScreens">
+         <property name="text">
+          <string>load Screens</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../Ressources.qrc">
+           <normaloff>:/Icons/Icons/screens.svg</normaloff>:/Icons/Icons/screens.svg</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTreeView" name="plotstoload"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QTextBrowser" name="textBrowser"/>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QPushButton" name="commitplot">
+           <property name="text">
+            <string>commit plot</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../Ressources.qrc">
+             <normaloff>:/Icons/Icons/uploadbanana.svg</normaloff>:/Icons/Icons/uploadbanana.svg</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QPushButton" name="removeplot">
+           <property name="text">
+            <string>Remove selected plot def from hard driver</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../Ressources.qrc">
+             <normaloff>:/Icons/Icons/bomb1.svg</normaloff>:/Icons/Icons/bomb1.svg</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="refresh">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../Ressources.qrc">
+             <normaloff>:/Icons/Icons/refresh.svg</normaloff>:/Icons/Icons/refresh.svg</iconset>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QTreeView" name="plotsatdabase"/>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../Ressources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

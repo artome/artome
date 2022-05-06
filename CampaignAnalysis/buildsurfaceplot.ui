@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>buildsurfaceplot</class>
+ <widget class="QDialog" name="buildsurfaceplot">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>787</width>
+    <height>458</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Helping Defining a surface plot</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../Ressources.qrc">
+    <normaloff>:/Icons/Icons/banana4.svg</normaloff>:/Icons/Icons/banana4.svg</iconset>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="informationlabel">
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;There is two options for defining the diameters (y values) for the surface plot. &lt;/p&gt;&lt;p&gt;Either one inputs a string with the diameters values splitted by a coma &lt;/p&gt;&lt;p&gt;(e.g .21,.32,.45;............, 6.5)&lt;/p&gt;&lt;p&gt; or, in the case where they are equaly spaced, either log or linear, one  should only provide&lt;/p&gt;&lt;p&gt;the initial and final diameter and the string will be automatically evaluated.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>Diameters</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="Diameters">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <widget class="QCheckBox" name="automatic">
+           <property name="text">
+            <string>Automatic</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="log">
+           <property name="text">
+            <string>&amp;log</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="linear">
+           <property name="text">
+            <string>li&amp;near</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="evaluate">
+           <property name="text">
+            <string>evaluate</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../Ressources.qrc">
+             <normaloff>:/Icons/Icons/mathematic.svg</normaloff>:/Icons/Icons/mathematic.svg</iconset>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string>first value</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="firstValue"/>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QLabel" name="label_4">
+           <property name="text">
+            <string>last value</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lastValue"/>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_4">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QCheckBox" name="checkManual">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If this is checked the bins to plot is not going to be fetched from the selectedwindows window (only one is necessary to have the table mane) but are going to be maual inputed as a comma separated values.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="text">
+          <string>Manual columns</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="Bins">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_6">
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="cancelbutton">
+         <property name="text">
+          <string>cancel</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../Ressources.qrc">
+           <normaloff>:/Icons/Icons/cancel4.svg</normaloff>:/Icons/Icons/cancel4.svg</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="aceptbutton">
+         <property name="text">
+          <string>accept</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../Ressources.qrc">
+           <normaloff>:/Icons/Icons/check46.svg</normaloff>:/Icons/Icons/check46.svg</iconset>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../Ressources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>automatic</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>Diameters</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>56</x>
+     <y>193</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>430</x>
+     <y>151</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cancelbutton</sender>
+   <signal>pressed()</signal>
+   <receiver>buildsurfaceplot</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>646</x>
+     <y>375</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>393</x>
+     <y>228</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>automatic</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>firstValue</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>56</x>
+     <y>193</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>252</x>
+     <y>235</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>automatic</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>lastValue</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>56</x>
+     <y>193</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>250</x>
+     <y>276</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>automatic</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>log</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>56</x>
+     <y>193</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>583</x>
+     <y>193</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>automatic</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>linear</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>56</x>
+     <y>193</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>646</x>
+     <y>193</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkManual</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>Bins</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>76</x>
+     <y>379</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>464</x>
+     <y>379</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
